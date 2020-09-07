@@ -1,0 +1,23 @@
+body{
+    margin:0;    
+}
+header{
+    width: 100%;
+    height: 101px;
+    background:url('img/headerback.png') repeat-x;
+    opacity: .9;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+header nav{
+    display: flex;
+}
+header nav a {
+    padding:0 20px;
+    font-size: 25px;
+    letter-spacing: 3px;
+    line-height: 25px;
+    color: #00eeff;
+    font-family: "Franklin Gothic";
+}
