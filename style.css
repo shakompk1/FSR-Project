@@ -56,6 +56,9 @@ nav a{
 }
 
 .services{
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
     width: 80%;
     height: 500px;
     margin: auto;
@@ -67,7 +70,6 @@ nav a{
 .serviceTypeChoise{
     display: flex;
     flex-direction: column;
-    margin: 150px 0;
 }
 
 .serviceType{
@@ -75,7 +77,11 @@ nav a{
     width: 420px;
     height: 165px;
     align-items:center;
-    margin:20px 0;
+    margin:5px 0;
+}
+
+.serviceType:first-child{
+    margin: 200px 0 0;
 }
 
 .serviceLogo{
@@ -89,6 +95,12 @@ nav a{
     width: 150px;
     height: 67px;
     background:black;
+}
+
+.serviceInfo{
+    width: 50%;
+    height: 50vh;
+    background:red;
 }
 .green{background:green;}
 .red{background:red;}
