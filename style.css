@@ -4,6 +4,7 @@ body{
 
 .container{
     width: 100%;
+    min-height: 800px;
     height: 100vh;
 }
 
@@ -70,20 +71,25 @@ nav a{
 .serviceTypeChoise{
     display: flex;
     flex-direction: column;
+    
 }
 
 .serviceType{
     display: flex;
+    align-items:center;
+    align-content: center;
     width: 420px;
     height: 165px;
-    align-items:center;
-    margin:5px 0;
+    margin:10px 0;
 }
 
 .serviceType:first-child{
     margin: 200px 0 0;
 }
-
+.serviceName{
+    color:white;
+    text-align: center;
+}
 .serviceLogo{
     display: block;
     width: 135px;
