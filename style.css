@@ -28,7 +28,13 @@ nav a{
     width: 100%;
     height: 100%;
   }
-
+.swiper-pagination-bullet{
+    width: 30px;
+    height: 30px;
+}
+.swiper-pagination-bullet-active {
+    background-color: violet;
+  }
 .swiper-slide {
     text-align: center;
     font-size: 18px;

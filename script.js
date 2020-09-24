@@ -3,9 +3,12 @@ const swiper = new Swiper('.swiper-container', {
     pagination: {
       el: '.swiper-pagination',
       dynamicBullets: true,
+      type:'bullets',
+      clickable:true
     },
     autoplay: {
-        delay: 2000,
+        delay: 10000,
+        disableOnInteraction:false
       },
     navigation: {
         nextEl: '.swiper-button-next',
