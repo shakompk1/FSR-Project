@@ -6,7 +6,6 @@ let serviceTypeChoise = document.querySelector('.serviceTypeChoise');
 let serviceTypeImg = document.querySelectorAll('.serviceType img');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
-let restarAnimation = false;
 let webImages =['img/type.jpg','img/hamster.jpg','img/pes.jpg'];
 let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 let text = [
@@ -18,7 +17,7 @@ let text = [
 webdevelopment.addEventListener('click',function(){
     serviceInfo.innerHTML = '';
     serviceTypeChoise.classList.add('web');
-    serviceTypeChoise.classList.remove('design')
+    serviceTypeChoise.classList.remove('design');
     for (let i = 0; i < text[0].length; i++) {
         serviceInfo.innerHTML += " " + text[0][i];        
     }
@@ -26,6 +25,7 @@ webdevelopment.addEventListener('click',function(){
     serviceLogo.forEach((img,i)=>{
         img.src = webImages[i];
     });
+    restarAnimation();
 });
 
 design.addEventListener('click',function(){
@@ -35,11 +35,11 @@ design.addEventListener('click',function(){
     for (let i = 0; i < text[1].length; i++) {
         serviceInfo.innerHTML += " " + text[1][i];        
     }
-    logoService.src="img/dog.jpg";
+    logoService.src="img/ps.png";
     serviceLogo.forEach((img,i)=>{
         img.src = designImages[i];
     });
-
+    restarAnimation();
 });
 
 serviceType.forEach((button,index)=>{
@@ -98,3 +98,18 @@ serviceType.forEach((button,index)=>{
             });        
     });
 });
+function restarAnimation(){
+    let speed = 300;
+    let count = '100%';
+    serviceType.forEach((b,i)=>{
+        b.animate([
+            // keyframes
+            { }, 
+            { transform: `translate3D(0, ${count}, 0)` }
+        ], {
+            // timing options
+            duration: speed,
+            fill: 'forwards'
+        }); 
+    });
+}
