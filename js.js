@@ -28,7 +28,7 @@ design.addEventListener('click',function(){
     }
     logoService.src="img/dog.jpg";
     serviceLogo.forEach((img,i)=>{
-        img.src = 'img/dog  .jpg';
+        img.src = 'img/dog.jpg';
     });
 
 });
