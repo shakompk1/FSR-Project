@@ -80,12 +80,10 @@ nav a{
     align-content: center;
     width: 420px;
     height: 165px;
-    margin:10px 0;
+    margin: 10px 0;
 }
 
-.serviceType:first-child{
-    margin: 200px 0 0;
-}
+
 .serviceName{
     color:white;
     text-align: center;

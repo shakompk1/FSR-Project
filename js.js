@@ -22,41 +22,50 @@ design.addEventListener('click',function(){
     }
 });
 
-serviceType.forEach((button , index) =>{
+serviceType.forEach((button,index)=>{
     button.addEventListener('click',()=>{
-        if(index == 0){
-            serviceType.forEach((b,i)=>{
-                if(i==0){
-                    Animation(200,b);
-                }
-            });
+        let count;
+        if(  index == 0){
+            count = '100%';
+        }else if(index == 1){
+            count = '0%';
+        }else if(index == 2){
+            count = '-100%';
         }
-        if(index == 1){
             serviceType.forEach((b,i)=>{
                 if(i==0){
-                    b.style.margin = `-50px 0 0`;
+                    b.animate([
+                        // keyframes
+                        { }, 
+                        { transform: `translate3D(0, ${count}, 0)` }
+                    ], {
+                        // timing options
+                        duration: 500,
+                        fill: 'forwards'
+                    });
                 }
-            });
-        }
-        if(index == 2){
-            serviceType.forEach((b,i)=>{
-                if(i==0){
-                    b.style.margin = `-200px 0 0`;
+                if(i==1){
+                    b.animate([
+                        // keyframes
+                        { }, 
+                        { transform: `translate3D(0, ${count}, 0)` }
+                    ], {
+                        // timing options
+                        duration: 500,
+                        fill: 'forwards'
+                    }); 
                 }
-            });
-        }        
+                if(i==2){
+                    b.animate([
+                        // keyframes
+                        { }, 
+                        { transform: `translate3D(0, ${count}, 0)` }
+                    ], {
+                        // timing options
+                        duration: 500,
+                        fill: 'forwards'
+                    }); 
+                }
+            });        
     });
 });
-    
-// function Animation(px,button){
-//     let marginTop = window.getComputedStyle(button, null).getPropertyValue("margin-top");
-//     marginTop = marginTop.replace(/[^\d]/g, "");
-//     let start  = setInterval(()=>{
-//         if(marginTop < px){
-//             marginTop = +marginTop + 1;
-//             button.style.margin = `${marginTop}px 0 0`
-//         }else{
-//             clearInterval(start)
-//         }
-//     },10);
-// }
