@@ -2,55 +2,66 @@ let webdevelopment = document.querySelectorAll('.servicesButton')[0];
 let design = document.querySelectorAll('.servicesButton')[1];
 let serviceInfo = document.querySelector('.serviceInfo');
 let serviceType = document.querySelectorAll('.serviceType');
+let serviceTypeChoise = document.querySelector('.serviceTypeChoise');
+let serviceTypeImg = document.querySelectorAll('.serviceType img');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
-
+let restarAnimation = false;
+let webImages =['img/type.jpg','img/hamster.jpg','img/pes.jpg'];
+let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 let text = [
     ["hello",'webdevelopment'],
     ["hello",'Design']
 ];
 
+
 webdevelopment.addEventListener('click',function(){
     serviceInfo.innerHTML = '';
+    serviceTypeChoise.classList.add('web');
+    serviceTypeChoise.classList.remove('design')
     for (let i = 0; i < text[0].length; i++) {
         serviceInfo.innerHTML += " " + text[0][i];        
     }
     logoService.src="img/type.jpg";
     serviceLogo.forEach((img,i)=>{
-        img.src = 'img/type.jpg';
+        img.src = webImages[i];
     });
 });
 
 design.addEventListener('click',function(){
     serviceInfo.innerHTML = '';
+    serviceTypeChoise.classList.add('design');
+    serviceTypeChoise.classList.remove('web')
     for (let i = 0; i < text[1].length; i++) {
         serviceInfo.innerHTML += " " + text[1][i];        
     }
     logoService.src="img/dog.jpg";
     serviceLogo.forEach((img,i)=>{
-        img.src = 'img/dog.jpg';
+        img.src = designImages[i];
     });
 
 });
 
 serviceType.forEach((button,index)=>{
     button.addEventListener('click',()=>{
+        let img = button.querySelector('img');
+        let image = img.getAttribute('src');
+        logoService.src=`${serviceTypeChoise.classList.contains('design')?designImages[index]:webImages[index]}`;
         let count;
         let speed = 300;
         if(  index == 0){
             count = '100%';
+            serviceInfo.innerHTML = "Я кот";   
+            
         }else if(index == 1){
             count = '0%';
+            serviceInfo.innerHTML = "Я хомяк";   
         }else if(index == 2){
             count = '-100%';
+            serviceInfo.innerHTML = "Я пес";
         }
-
-
-
-
-
-        //animation
-            serviceType.forEach((b,i)=>{
+        
+        serviceType.forEach((b,i)=>{
                 if(i == 0){
                     b.animate([
                         // keyframes
