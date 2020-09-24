@@ -5,7 +5,7 @@ body{
 .container{
     width: 100%;
     min-height: 800px;
-    height: 100vh;
+    min-height: 100vh;
 }
 
 header{
@@ -20,7 +20,7 @@ nav a{
 }
 
 .title{
-    padding: 50px 0 0;
+    padding: 30px 0 0;
     font: normal 3em black;
     text-align: center;
 }
@@ -56,16 +56,30 @@ nav a{
     height: 70px;
 }
 
+.logoService{
+    position: relative;
+    text-align: center;
+    margin: 180px 0;
+}
+
+.logoService img{
+    transform: translate(-50%,0);
+    height: 300px;
+    position: absolute;
+    top:-150px;
+}
+
 .services{
     display: flex;
     justify-content: space-between;
     align-items:center;
-    width: 80%;
-    height: 500px;
+    width: 70%;
+    max-height: 500px;
     margin: auto;
     border-top-right-radius:150px;
     border:1px solid white;
     overflow: hidden;
+    z-index: 0;
 }
 
 .serviceTypeChoise{
@@ -78,6 +92,7 @@ nav a{
     display: flex;
     align-items:center;
     align-content: center;
+    transform: translate3d(0%,  100%, 0);
     width: 420px;
     height: 165px;
     margin: 10px 0;
@@ -102,8 +117,9 @@ nav a{
 }
 
 .serviceInfo{
-    width: 50%;
-    height: 50vh;
+    align-self: flex-end;
+    width: 70%;
+    height: 350px;
     background:red;
 }
 .green{background:green;}
