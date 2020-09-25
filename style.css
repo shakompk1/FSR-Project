@@ -11,12 +11,63 @@ body{
 header{
     display: flex;
     justify-content: space-around;
-    padding: 10px 0;
+    padding: 30px 0;
 }
 
+header i{
+    font-size: 1.5em;
+    color:white;
+    cursor: pointer;
+}
+.languageBlock{
+    position: relative;
+}
+
+
+.languageBlock i:hover + .languageList{
+    display: block;
+} 
+
+.languageList:hover{
+    display: block;
+}
+.languageList{
+    display: none;
+    position: absolute;
+    transform: translate(-10%,0);
+    width: 30px;
+    padding: 10px 0 0;
+    animation:listDrop 2s forwards;
+    overflow: hidden;
+}
+
+@keyframes listDrop{
+    from{ height: 0;}
+    to{height: 120px;}
+}
+
+.languageList li{
+    transition: 0.5s;
+}
+.languageList li:hover{
+    cursor: pointer;
+    background:lightblue;
+    padding: 5px;
+    border-radius: 10px;
+}
 nav a{
-    margin: 0  5px;
+    margin: 0 5px;
+    padding: 5px 15px;
+    border-radius: 25px;
+    font: italic  1.2em normal;
+    color:#fff;
     text-decoration: none;
+    transition: 1s;
+}
+
+nav a:hover{
+    background-color:white;
+    color:black;
 }
 
 .title{
@@ -25,21 +76,24 @@ nav a{
     text-align: center;
 }
 
+
 .swiper-container {
     width: 100%;
     height: 100%;
   }
 .swiper-pagination-bullet{
-    width: 30px;
-    height: 30px;
+    background:lightblue;
+    width: 20px;
+    height: 20px;
 }
 .swiper-pagination-bullet-active {
     background-color: violet;
   }
 .swiper-slide {
+    height: 80vh;
     text-align: center;
     font-size: 18px;
-    background: #fff;
+    background: rgba(0, 0, 0, 0.0);
     display: -webkit-box;
     display: -ms-flexbox;
     display: -webkit-flex;
@@ -54,16 +108,15 @@ nav a{
     align-items: center;
   }
 
+.swiper-button-next , .swiper-button-prev{
+    color:lightblue;
+}
 .sliderBlock{
     display: flex;
     justify-content: center;
     align-items:center;
-    border:1px solid green;
     width: 70%;
-    height: 60vh;
     margin: 0 auto;
-    background:white;
-    border-radius: 25px;
 
 }
 
@@ -144,6 +197,36 @@ nav a{
     height: 350px;
     background:red;
 }
+
+.contacts{
+    display: flex;
+    justify-content: center;
+}
+
+.contactsInfo{
+    width: 50%;
+    font-size: 44px;
+    letter-spacing: -1px;
+    line-height: 44px;
+    color: #000;
+    font-family: "Myriad Pro";
+    text-align: center;
+    
+}
+
+.contactsForm{
+    width: 50%;
+    width: 50%;
+    font-size: 44px;
+    letter-spacing: -1px;
+    line-height: 44px;
+    color: #000;
+    font-family: "Myriad Pro";
+    text-align: center;
+}
+
 .green{background:green;}
-.red{background:red;}
+.red{
+    background: url('/img/backgroundone.jpg') center/cover fixed;
+}
 .yellow{background:yellow;}
