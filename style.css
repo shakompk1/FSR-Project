@@ -199,11 +199,8 @@ nav a:hover{
     position: absolute;
     right: 35%;
     width: 150px;
-<<<<<<< Updated upstream
-=======
     height: 67px;
     background:violet;
->>>>>>> Stashed changes
 }
 .active{
     animation: span;  
