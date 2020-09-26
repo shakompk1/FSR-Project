@@ -194,7 +194,7 @@ nav a:hover{
 }
 .active{
     animation: span;  
-    animation: circle 1s forwards;
+    animation: circle 700ms forwards;
     clip-path: circle(25%);
     background: violet;
     
