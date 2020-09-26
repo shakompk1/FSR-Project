@@ -131,13 +131,33 @@ nav a{
     height: 165px;
     border-top-right-radius:80px;
 }
-
-.serviceType span{
-    width: 150px;
-    height: 67px;
-    background:black;
+.serviceType{
+    position: relative;
 }
+.serviceType img{
+    position: absolute;
+    right: 35%;
+    width: 150px;
+}
+.active{
+    animation: span;  
+    animation: circle 1s forwards;
+    clip-path: circle(25%);
+    background: violet;
+    
+}
+.serviceType span{
+    width: 100%;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: left;
+    display: inline-block;
 
+}
+@keyframes circle {
+    0% { clip-path: circle(25%); }
+    100% { clip-path: circle(75%); }
+  }
 .serviceInfo{
     align-self: flex-end;
     width: 70%;
