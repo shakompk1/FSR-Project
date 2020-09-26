@@ -56,7 +56,8 @@ serviceType.forEach((button,index)=>{
             
         }else if(index == 1){
             count = '0%';
-            serviceInfo.innerHTML = "Я хомяк";   
+            serviceInfo.innerHTML = "Я хомяк";
+            button.classList.add('active');
         }else if(index == 2){
             count = '-100%';
             serviceInfo.innerHTML = "Я пес";
