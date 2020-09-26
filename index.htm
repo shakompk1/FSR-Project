@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SFR</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"><link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
@@ -11,16 +12,24 @@
 <body>
     <section class="container red">
         <header>
+           <div class="languageBlock">
+                <i class="fas fa-globe"></i>
+                <ul class="languageList">
+                    <li><img src="img/flag/azerbaijan.svg" alt="azerbaijan"></li>
+                    <li><img src="img/flag/russia.svg" alt="russia"></li>
+                    <li><img src="img/flag/united-kingdom.svg" alt="english"></li>
+                </ul>
+           </div>
             <div>
                 <img src="" alt="logo">
             </div>
             <nav>
-                <a href="">Main</a>
-                <a href="">Buy</a>
+                <a href="">Home</a>
+                <a href="">Services</a>
+                <a href="">Portfolio</a>
                 <a href="">Contact</a>
             </nav>
         </header>
-        <h1 class="title">НАЗВАНИЕ Компании</h1>
         <div class="sliderBlock">
             <div class="swiper-container">
                 <div class="swiper-wrapper">
@@ -30,8 +39,8 @@
                 </div>
                 <!-- Add Pagination -->
                 <div class="swiper-pagination"></div>
-                <!-- <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div> -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
               </div>
         </div> 
 
@@ -58,7 +67,42 @@
             </div>
         </div>
     </section>
-    <section class="container yellow"></section>
+    <section class="container yellow">
+        <h1 class="title">Связь с нами</h1>
+        <div class="contacts">
+            <div class="contactsInfo">
+                <h2>Контакты</h2>
+                <ul>
+                    <li>Web development</li>
+                    <li>sh.mirzaisefidi@gmail.com</li>
+                    <li>Design</li>
+                    <li>sh.mirzaisefidi@gmail.com</li>
+                    <li>Skype</li>
+                    <li>xuy vam v rot</li>
+                </ul>
+
+            </div>
+            <div class="contactsForm">
+                <form action="">
+                    <div>
+                        <label for="FIO">фио</label>
+                        <input id="FIO" type="text">
+                    </div>
+                    <div>
+                        <label for="mail">Почта</label>
+                        <input id="mail" type="mail">
+                    </div>
+                    <div>
+                        <label for="number">number</label>
+                        <input id="number" type="number">
+                    </div>
+                    <label for="comments">comments</label>
+                    <textarea  id="comments" ></textarea>
+                </form>
+
+            </div>
+        </div>
+    </section>
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="script.js"></script>
     <script src="js.js"></script>
