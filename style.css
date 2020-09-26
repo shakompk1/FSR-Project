@@ -90,7 +90,15 @@ nav a{
     position: absolute;
     top:-150px;
 }
-
+.active{
+    background-color: violet;
+    animation-name: example;
+    animation-duration: 4s;
+}
+@keyframes example {
+    from {width: 0;}
+    to {width: 100%;}
+  }
 .services{
     display: flex;
     justify-content: space-between;
@@ -138,6 +146,11 @@ nav a{
     position: absolute;
     right: 35%;
     width: 150px;
+<<<<<<< Updated upstream
+=======
+    height: 67px;
+    background:violet;
+>>>>>>> Stashed changes
 }
 .active{
     animation: span;  
