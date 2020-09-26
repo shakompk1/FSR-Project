@@ -6,6 +6,7 @@ let serviceTypeChoise = document.querySelector('.serviceTypeChoise');
 let serviceTypeImg = document.querySelectorAll('.serviceType img');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
+let serviceName = document.querySelectorAll('.serviceName');
 let webImages =['img/type.jpg','img/hamster.jpg','img/pes.jpg'];
 let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 let text = [
@@ -55,12 +56,16 @@ serviceType.forEach((button,index)=>{
             
         }else if(index == 1){
             count = '0%';
-            serviceInfo.innerHTML = "Я хомяк";   
+            serviceInfo.innerHTML = "Я хомяк";
+            button.classList.add('active');
         }else if(index == 2){
             count = '-100%';
             serviceInfo.innerHTML = "Я пес";
         }
-        
+        serviceName.forEach((el,i) =>{
+          if(i===index) el.classList.add('active');
+          else el.classList.remove('active');       
+        });
         serviceType.forEach((b,i)=>{
                 if(i == 0){
                     b.animate([
