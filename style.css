@@ -143,32 +143,22 @@ nav a:hover{
     position: absolute;
     top:-150px;
 }
-.active{
-    background-color: violet;
-    animation-name: example;
-    animation-duration: 4s;
-}
-@keyframes example {
-    from {width: 0;}
-    to {width: 100%;}
-  }
 .services{
     display: flex;
     justify-content: space-between;
     align-items:center;
-    width: 70%;
+    width:70%;
     max-height: 500px;
     margin: auto;
-    border-top-right-radius:150px;
-    border:1px solid white;
+    background-color:transparent;
+    border:1px solid #8be0fc;
     overflow: hidden;
-    z-index: 0;
 }
 
 .serviceTypeChoise{
     display: flex;
-    flex-direction: column;
-    
+    flex-direction: column;    
+    width: 30%;
 }
 
 .serviceType{
@@ -176,7 +166,7 @@ nav a:hover{
     align-items:center;
     align-content: center;
     transform: translate3d(0%,  100%, 0);
-    width: 420px;
+    width: 100%;
     height: 165px;
     margin: 10px 0;
 }
@@ -185,6 +175,8 @@ nav a:hover{
 .serviceName{
     color:white;
     text-align: center;
+    padding-left: 30px;
+    font-weight: bolder;
 }
 .serviceLogo{
     display: block;
@@ -197,16 +189,16 @@ nav a:hover{
 }
 .serviceType img{
     position: absolute;
-    right: 35%;
+    right: 30%;
     width: 150px;
-    height: 67px;
-    background:violet;
 }
 .active{
     animation: span;  
-    animation: circle 1s forwards;
+    animation: circle 700ms forwards;
     clip-path: circle(25%);
-    background: violet;
+    background: #8be0fc;
+    color: black;
+    font-weight: bolder;
     
 }
 .serviceType span{
@@ -222,12 +214,54 @@ nav a:hover{
     100% { clip-path: circle(75%); }
   }
 .serviceInfo{
-    align-self: flex-end;
-    width: 70%;
-    height: 350px;
-    background:red;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    width: 40%;
+    padding: 20px;
 }
-
+.price_block{
+    border:1px solid #8be0fc;
+    border-radius: 7px;
+    width: 30%;
+    color:white;
+    text-align: center;
+    padding: 15px 20px;
+}
+.info_block{
+    border:1px solid #8be0fc;
+    border-radius: 5px;
+    color:white;
+    text-align: center;
+    padding: 15px 20px;
+}
+.line{
+    border-left: thin solid  #8be0fc;
+    height: 40px;
+}
+.contact_us{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    flex-direction: column;
+    font-weight: 400;
+    font-size: 30px;
+    width: 30%;
+    color:white;
+}
+.contact_us button{
+    margin-top: 20px;
+    background-color:#8be0fc;
+    border:none;
+    outline: none;
+    color: black;
+    font-size: 35px;
+}
+.contact_us span{
+    text-transform: uppercase;
+    font-weight: bolder;
+}
 .contacts{
     display: flex;
     justify-content: center;
@@ -255,7 +289,10 @@ nav a:hover{
     text-align: center;
 }
 
-.green{background:green;}
+.green{
+    background: url('/img/bg_2.png');
+
+}
 .red{
     background: url('/img/backgroundone.jpg') center/cover fixed;
 }
