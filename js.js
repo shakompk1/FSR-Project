@@ -7,6 +7,8 @@ let serviceTypeImg = document.querySelectorAll('.serviceType img');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
 let serviceName = document.querySelectorAll('.serviceName');
+let priceBlock = document.querySelector('.price_value');
+let infoBlock = document.querySelector('.info_value');
 let webImages =['img/type.jpg','img/hamster.jpg','img/pes.jpg'];
 let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 let text = [
@@ -52,14 +54,17 @@ serviceType.forEach((button,index)=>{
         let speed = 300;
         if(  index == 0){
             count = '100%';
-            serviceInfo.innerHTML = "Я кот";   
+            priceBlock.innerHTML = "100$"; 
+            infoBlock.innerHTML = "WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";  
             
         }else if(index == 1){
             count = '0%';
-            serviceInfo.innerHTML = "Я хомяк";
+            priceBlock.innerHTML = "200$"; 
+            infoBlock.innerHTML = "WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";  
         }else if(index == 2){
             count = '-100%';
-            serviceInfo.innerHTML = "Я пес";
+            priceBlock.innerHTML = "300$"; 
+            infoBlock.innerHTML = "WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";  
         }
         serviceName.forEach((el,i) =>{
           if(i===index) el.classList.add('active');
