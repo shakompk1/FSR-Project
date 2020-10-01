@@ -305,38 +305,122 @@ nav a:hover{
     text-transform: uppercase;
     font-weight: bolder;
 }
+
+.colorPurple{
+    color:#7857c9;
+}
+
 .contacts{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+.contactsShortInfo{
     display: flex;
     justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 25px 0 0;
 }
 
-.contactsInfo{
-    width: 50%;
-    font-size: 44px;
-    letter-spacing: -1px;
-    line-height: 44px;
-    color: #000;
-    font-family: "Myriad Pro";
-    text-align: center;
-    
+.contactBlock{
+    width:310px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border:1px solid #515090;
+    box-shadow: -1px 1px 17px 0px rgba(120,87,201,1);
+    border-radius: 25px;
 }
 
-.contactsForm{
-    width: 50%;
-    width: 50%;
-    font-size: 44px;
-    letter-spacing: -1px;
-    line-height: 44px;
-    color: #000;
-    font-family: "Myriad Pro";
-    text-align: center;
+.contactBlock i{
+    margin:25px 0;
+    color: #515090;
+    font-size: 1.8em;
+}
+.contactBlock {
+    color:white;
+}
+.lineContactLeft{
+    width: 231px;
+    border-bottom: 1px solid #7857c9;
+    box-shadow: -1px 1px 17px 0px rgba(120,87,201,1);
+}
+
+.lineContactTop{
+    height: 45px;
+    border-left: 1px solid #7857c9;
+    box-shadow:  -2px 21px 110px -11px #7857c9;
+    margin: 0;
+}
+
+.smallCompanyName{
+    padding: 10px;
+    border: 1px solid #7857c9;
+    border-radius: 15px;
+    color:white;
+}
+
+.contactElemntsBlock{
+    display: flex;
+    justify-content: space-around;
+    border: 1px solid #7857c9;
+    box-shadow: -1px 1px 17px 0px rgba(120,87,201,1);
+    border-radius: 25px;
+    padding: 20px;
+    background:rgba(0, 0, 0, 0.0);
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 0 15px;
+}
+.form div{
+    margin-bottom: 5px;
+}
+
+.form div input{
+    width: 330px;
+    height: 40px;
+    margin: 10px;
+    border-radius: 15px;
+    border: 1px solid #000;
+    outline:none;
+    padding: 10px;
+}
+
+
+.form div textarea{
+    width: 100%;
+    height: 250px;
+    border-radius: 15px;
+    margin: 10px;
+    padding: 10px;
+    resize: none;
+    outline:none;
+}
+
+.form div:last-child{
+    display: flex;
+    justify-content: flex-end;
+}
+.form div:last-child input{
+    width: 280px;
+    background:#7857c9;
+    border: none;
+    border-bottom-left-radius: 150px;
+    border-top-right-radius: 150px;
 }
 
 .green{
-    background: url('img/bg_2.png');
+    background: url('img/bg_2.png') center/cover fixed;
 
 }
 .red{
     background: url('img/backgroundone.jpg') center/cover fixed;
 }
-.yellow{background:yellow;}
+.yellow{background:url(img/bg_3.jpg)  center/cover fixed;}
