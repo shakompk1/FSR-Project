@@ -18,12 +18,20 @@ let text = [
 
 
 webdevelopment.addEventListener('click',function(){
-    serviceInfo.innerHTML = '';
+    // serviceInfo.innerHTML = '';
     serviceTypeChoise.classList.add('web');
     serviceTypeChoise.classList.remove('design');
-    for (let i = 0; i < text[0].length; i++) {
-        serviceInfo.innerHTML += " " + text[0][i];        
-    }
+    // for (let i = 0; i < text[0].length; i++) {
+    //     serviceInfo.innerHTML += " " + text[0][i];
+    // }
+    serviceName.forEach((el,i) =>{
+       if(i===0) {
+           priceBlock.innerHTML = "$100";
+           infoBlock.innerHTML = "WEB WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";
+           el.classList.add('active');
+       }
+       else el.classList.remove('active');
+    });
     logoService.src="img/type.jpg";
     serviceLogo.forEach((img,i)=>{
         img.src = webImages[i];
@@ -32,17 +40,25 @@ webdevelopment.addEventListener('click',function(){
 });
 
 design.addEventListener('click',function(){
-    serviceInfo.innerHTML = '';
+    // serviceInfo.innerHTML = '';
     serviceTypeChoise.classList.add('design');
     serviceTypeChoise.classList.remove('web')
-    for (let i = 0; i < text[1].length; i++) {
-        serviceInfo.innerHTML += " " + text[1][i];        
-    }
+    // for (let i = 0; i < text[1].length; i++) {
+    //     serviceInfo.innerHTML += " " + text[1][i];
+    // }
     logoService.src="img/ps.png";
     serviceLogo.forEach((img,i)=>{
         img.src = designImages[i];
     });
     restarAnimation();
+    serviceName.forEach((el,i) =>{
+        if(i===0) {
+            priceBlock.innerHTML = "$100";
+            infoBlock.innerHTML = "DESIGN WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";
+            el.classList.add('active');
+        }
+        else el.classList.remove('active');
+    });
 });
 
 serviceType.forEach((button,index)=>{
