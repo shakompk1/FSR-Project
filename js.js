@@ -1,33 +1,99 @@
 let webdevelopment = document.querySelectorAll('.servicesButton')[0];
 let design = document.querySelectorAll('.servicesButton')[1];
-let serviceInfo = document.querySelector('.serviceInfo');
 let serviceType = document.querySelectorAll('.serviceType');
 let serviceTypeChoise = document.querySelector('.serviceTypeChoise');
-let serviceTypeImg = document.querySelectorAll('.serviceType img');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
 let serviceName = document.querySelectorAll('.serviceName');
+let languages = document.querySelectorAll('.lang');
+let navMenu = document.querySelectorAll('nav a');
+let titles = document.querySelectorAll('.title');
 let priceBlock = document.querySelector('.price_value');
 let infoBlock = document.querySelector('.info_value');
 let webImages =['img/html_pt.png','img/hamster.jpg','img/pes.jpg'];
+let data;
+let webText = [];
+let webPrice  = [];
+let designText = [];
+let designPrice = [];
 let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
-let text = [
-    ["hello",'webdevelopment'],
-    ["hello",'Design']
-];
 
 
+ const getData = async()=>{
+    let response = await fetch('lang.json');
+    data = await response.json();
+     webText = data.az.servicesInfoWebText;
+     webPrice = data.az.servicesInfoWebPrice;
+     designText = data.az.servicesInfoDesignText;
+     designPrice = data.az.servicesInfoDesignPrice;
+     navMenu.forEach((el,index)=>{
+         el.innerHTML = '';
+        el.innerHTML = data.az.nav[index];
+     });
+     titles.forEach((el,index)=>{
+         el.innerHTML = '';
+        el.innerHTML = data.az.titles[index];
+     });
+}
+
+languages.forEach((el,index) =>{
+    getData();
+   el.addEventListener('click', ()=>{
+       if(index===0){
+           webText = data.az.servicesInfoWebText;
+           webPrice = data.az.servicesInfoWebPrice;
+           designText = data.az.servicesInfoDesignText;
+           designPrice = data.az.servicesInfoDesignPrice;
+           navMenu.forEach((el,index)=>{
+               el.innerHTML = '';
+               el.innerHTML = data.az.nav[index];
+           });
+           titles.forEach((el,index)=>{
+               el.innerHTML = '';
+               el.innerHTML = data.az.titles[index];
+           });
+       }else
+       if(index===1){
+           webText = data.ru.servicesInfoWebText;
+           webPrice = data.ru.servicesInfoWebPrice;
+           designText = data.ru.servicesInfoDesignText;
+           designPrice = data.ru.servicesInfoDesignPrice;
+           serviceType.forEach((el,i) =>{
+               console.log(i);
+           });
+           navMenu.forEach((el,index)=>{
+               el.innerHTML = '';
+               el.innerHTML = data.ru.nav[index];
+           });
+           titles.forEach((el,index)=>{
+               el.innerHTML = '';
+               el.innerHTML = data.ru.titles[index];
+           });
+       }else
+       if(index===2){
+           webText = data.en.servicesInfoWebText;
+           webPrice = data.en.servicesInfoWebPrice;
+           designText = data.en.servicesInfoDesignText;
+           designPrice = data.en.servicesInfoDesignPrice;
+           navMenu.forEach((el,index)=>{
+               el.innerHTML = '';
+               el.innerHTML = data.en.nav[index];
+           });
+           titles.forEach((el,index)=>{
+               el.innerHTML = '';
+               el.innerHTML = data.en.titles[index];
+           });
+       }
+   });
+
+});
 webdevelopment.addEventListener('click',function(){
-    // serviceInfo.innerHTML = '';
     serviceTypeChoise.classList.add('web');
     serviceTypeChoise.classList.remove('design');
-    // for (let i = 0; i < text[0].length; i++) {
-    //     serviceInfo.innerHTML += " " + text[0][i];
-    // }
     serviceName.forEach((el,i) =>{
        if(i===0) {
-           priceBlock.innerHTML = "$100";
-           infoBlock.innerHTML = "WEB WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";
+           priceBlock.innerHTML = webPrice[i];
+           infoBlock.innerHTML = webText[i];
            el.classList.add('active');
        }
        else el.classList.remove('active');
@@ -40,12 +106,8 @@ webdevelopment.addEventListener('click',function(){
 });
 
 design.addEventListener('click',function(){
-    // serviceInfo.innerHTML = '';
     serviceTypeChoise.classList.add('design');
     serviceTypeChoise.classList.remove('web')
-    // for (let i = 0; i < text[1].length; i++) {
-    //     serviceInfo.innerHTML += " " + text[1][i];
-    // }
     logoService.src="img/ps.png";
     serviceLogo.forEach((img,i)=>{
         img.src = designImages[i];
@@ -53,8 +115,8 @@ design.addEventListener('click',function(){
     restarAnimation();
     serviceName.forEach((el,i) =>{
         if(i===0) {
-            priceBlock.innerHTML = "$100";
-            infoBlock.innerHTML = "DESIGN WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";
+            priceBlock.innerHTML = designPrice[i];
+            infoBlock.innerHTML = designText[i];
             el.classList.add('active');
         }
         else el.classList.remove('active');
@@ -63,24 +125,22 @@ design.addEventListener('click',function(){
 
 serviceType.forEach((button,index)=>{
     button.addEventListener('click',()=>{
-        let img = button.querySelector('img');
-        let image = img.getAttribute('src');
         logoService.src=`${serviceTypeChoise.classList.contains('design')?designImages[index]:webImages[index]}`;
         let count;
         let speed = 300;
-        if(  index == 0){
+        if(  index === 0){
             count = '100%';
-            priceBlock.innerHTML = "$100"; 
-            infoBlock.innerHTML = "WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";  
+            priceBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designPrice[index]:webPrice[index]}`;
+            infoBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designText[index]:webText[index]}`;
             
-        }else if(index == 1){
+        }else if(index === 1){
             count = '0%';
-            priceBlock.innerHTML = "$200"; 
-            infoBlock.innerHTML = "WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";  
-        }else if(index == 2){
+            priceBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designPrice[index]:webPrice[index]}`;
+            infoBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designText[index]:webText[index]}`;
+        }else if(index === 2){
             count = '-100%';
-            priceBlock.innerHTML = "$300"; 
-            infoBlock.innerHTML = "WE BELIEVE IN FAIR WORK FOR FAIR PRICE AND HONOUR OUR ARGREEMENTS WITH EVERY CLIENT. OUR REPUTATION GROWS WITH EACH  SATISFIED CUSTOMER AND WE TREASURE BOTH OF THEM.";  
+            priceBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designPrice[index]:webPrice[index]}`;
+            infoBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designText[index]:webText[index]}`;
         }
         serviceName.forEach((el,i) =>{
           if(i===index) el.classList.add('active');
