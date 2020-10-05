@@ -432,10 +432,10 @@ nav a:hover{
 }
 
 .green{
-    background: url('img/bg2_new.png') center/cover fixed;
+    background: url('img/bg2_new.png') center/cover;
 
 }
 .red{
-    background: url('img/bg_new.png') center/cover fixed;
+    background: url('img/bg_new.png') center/cover;
 }
-.yellow{background:url(img/bg_3.jpg)  center/cover fixed;}
+.yellow{background:url(img/bg_3.jpg)  center/cover;}

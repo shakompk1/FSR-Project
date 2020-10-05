@@ -9,13 +9,12 @@ let serviceTypeChoise = document.querySelector('.serviceTypeChoise');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
 let serviceName = document.querySelectorAll('.serviceName');
-let languages = document.querySelectorAll('.lang');
 let navMenu = document.querySelectorAll('nav a');
 let titles = document.querySelectorAll('.title');
 let priceBlock = document.querySelector('.price_value');
 let infoBlock = document.querySelector('.info_value');
 let webImages =['img/html_pt.png','img/hamster.jpg','img/pes.jpg'];
-let data;
+
 let webText = [
     "1 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
     "2 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
