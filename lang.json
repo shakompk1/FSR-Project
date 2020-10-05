@@ -34,7 +34,16 @@
       "600 AZN",
       "700 AZN"
     ],
-    "contact": "Bizimle Elage"
+    "placeholders": [
+      "Ad",
+      "Mobil Nomre",
+      "Elektron unvan"
+    ],
+    "textArea": "Şərh",
+    "bigWord": "Peşəkar",
+    "comment": "HTML SİZİN ÜÇÜN",
+    "contact": "Bizimle Elage",
+    "lang": "az"
   },
   "ru": {
     "nav": [
@@ -71,7 +80,16 @@
       "600 RUB",
       "700 RUB"
     ],
-    "contact": "Связаться с Нами"
+    "placeholders": [
+      "Имя",
+      "Номер Телефона",
+      "Электронная почта"
+    ],
+    "textArea": "Комментарий",
+    "bigWord": "Профессиональный",
+    "comment": "HTML ДЛЯ ВАС",
+    "contact": "Связаться с Нами",
+    "lang": "ru"
   },
   "en": {
     "nav": [
@@ -108,6 +126,15 @@
       "600 EUR",
       "700 EUR"
     ],
-    "contact": "Contact with Us"
+    "placeholders": [
+      "Name",
+      "Mobile number",
+      "E-mail"
+    ],
+    "textArea": "Comment",
+    "bigWord": "Professional",
+    "comment": "HTML FOR YOU",
+    "contact": "Contact with Us",
+    "lang": "en"
   }
 }

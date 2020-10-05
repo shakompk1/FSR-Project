@@ -1,6 +1,10 @@
 let webdevelopment = document.querySelectorAll('.servicesButton')[0];
 let design = document.querySelectorAll('.servicesButton')[1];
 let serviceType = document.querySelectorAll('.serviceType');
+let contactUsButton = document.querySelector('.contact_us button');
+let contactUsText= document.querySelector('.contact_us p');
+let contactUsInput= document.querySelectorAll('.form input');
+let contactUsTextArea= document.querySelector('.form textarea');
 let serviceTypeChoise = document.querySelector('.serviceTypeChoise');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
@@ -12,81 +16,80 @@ let priceBlock = document.querySelector('.price_value');
 let infoBlock = document.querySelector('.info_value');
 let webImages =['img/html_pt.png','img/hamster.jpg','img/pes.jpg'];
 let data;
-let webText = [];
-let webPrice  = [];
-let designText = [];
-let designPrice = [];
+let webText = [
+    "1 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+    "2 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+    "3 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir."
+];
+let webPrice  = [
+    "100 AZN",
+    "200 AZN",
+    "300 AZN"
+];
+let designText = [
+    "1 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+    "2 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+    "3 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir."
+];
+let designPrice = [
+    "500 AZN",
+    "600 AZN",
+    "700 AZN"
+];
 let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 
 
- const getData = async()=>{
-    let response = await fetch('lang.json');
-    data = await response.json();
-     webText = data.az.servicesInfoWebText;
-     webPrice = data.az.servicesInfoWebPrice;
-     designText = data.az.servicesInfoDesignText;
-     designPrice = data.az.servicesInfoDesignPrice;
+ const getData = async(lang)=>{
+     let route = window.location.search;
+     let test = await fetch(`http://localhost:3000/language${route}`);
+     console.log(route);
+     let langBase = await test.json();
+
+     let innerText = langBase.comment;
+     let BigInnerText = langBase.bigWord;
+     webText = langBase.servicesInfoWebText;
+     webPrice = langBase.servicesInfoWebPrice;
+     designText = langBase.servicesInfoDesignText;
+     designPrice = langBase.servicesInfoDesignPrice;
+     contactUsButton.innerHTML = langBase.contact;
+     contactUsText.innerHTML =`<span>${BigInnerText}</span><br/>${innerText}`;
+     webdevelopment.innerHTML = langBase.services[0];
+     design.innerHTML = langBase.services[1];
+     contactUsTextArea.placeholder =langBase.textArea;
      navMenu.forEach((el,index)=>{
          el.innerHTML = '';
-        el.innerHTML = data.az.nav[index];
+         el.innerHTML =langBase.nav[index];
      });
      titles.forEach((el,index)=>{
-         el.innerHTML = '';
-        el.innerHTML = data.az.titles[index];
+        el.innerHTML = '';
+        el.innerHTML = langBase.titles[index];
+     });
+     contactUsInput.forEach((el,index) =>{
+         el.placeholder = langBase.placeholders[index];
+     })
+     serviceType.forEach((el,index)=>{
+         if(  el.classList.contains('selected')){
+            priceBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designPrice[index]:webPrice[index]}`;
+            infoBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designText[index]:webText[index]}`;
+         }
      });
 }
+getData();
 
-languages.forEach((el,index) =>{
-    getData();
-   el.addEventListener('click', ()=>{
-       if(index===0){
-           webText = data.az.servicesInfoWebText;
-           webPrice = data.az.servicesInfoWebPrice;
-           designText = data.az.servicesInfoDesignText;
-           designPrice = data.az.servicesInfoDesignPrice;
-           navMenu.forEach((el,index)=>{
-               el.innerHTML = '';
-               el.innerHTML = data.az.nav[index];
-           });
-           titles.forEach((el,index)=>{
-               el.innerHTML = '';
-               el.innerHTML = data.az.titles[index];
-           });
-       }else
-       if(index===1){
-           webText = data.ru.servicesInfoWebText;
-           webPrice = data.ru.servicesInfoWebPrice;
-           designText = data.ru.servicesInfoDesignText;
-           designPrice = data.ru.servicesInfoDesignPrice;
-           serviceType.forEach((el,i) =>{
-               console.log(i);
-           });
-           navMenu.forEach((el,index)=>{
-               el.innerHTML = '';
-               el.innerHTML = data.ru.nav[index];
-           });
-           titles.forEach((el,index)=>{
-               el.innerHTML = '';
-               el.innerHTML = data.ru.titles[index];
-           });
-       }else
-       if(index===2){
-           webText = data.en.servicesInfoWebText;
-           webPrice = data.en.servicesInfoWebPrice;
-           designText = data.en.servicesInfoDesignText;
-           designPrice = data.en.servicesInfoDesignPrice;
-           navMenu.forEach((el,index)=>{
-               el.innerHTML = '';
-               el.innerHTML = data.en.nav[index];
-           });
-           titles.forEach((el,index)=>{
-               el.innerHTML = '';
-               el.innerHTML = data.en.titles[index];
-           });
-       }
-   });
-
-});
+// languages.forEach((el,index) =>{
+//
+//    el.addEventListener('click', ()=>{
+//        if(index===0){
+//         getData('az');
+//        }else
+//        if(index===1){
+//            getData('ru');
+//        }else
+//        if(index===2){
+//            getData('en');
+//        }
+//    });
+// });
 webdevelopment.addEventListener('click',function(){
     serviceTypeChoise.classList.add('web');
     serviceTypeChoise.classList.remove('design');
@@ -125,6 +128,9 @@ design.addEventListener('click',function(){
 
 serviceType.forEach((button,index)=>{
     button.addEventListener('click',()=>{
+        serviceType.forEach(el =>{
+            el.classList.remove('selected');
+        })
         logoService.src=`${serviceTypeChoise.classList.contains('design')?designImages[index]:webImages[index]}`;
         let count;
         let speed = 300;
@@ -132,15 +138,17 @@ serviceType.forEach((button,index)=>{
             count = '100%';
             priceBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designPrice[index]:webPrice[index]}`;
             infoBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designText[index]:webText[index]}`;
-            
+            button.classList.add('selected');
         }else if(index === 1){
             count = '0%';
             priceBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designPrice[index]:webPrice[index]}`;
             infoBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designText[index]:webText[index]}`;
+            button.classList.add('selected');
         }else if(index === 2){
             count = '-100%';
             priceBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designPrice[index]:webPrice[index]}`;
             infoBlock.innerHTML = `${serviceTypeChoise.classList.contains('design')?designText[index]:webText[index]}`;
+            button.classList.add('selected');
         }
         serviceName.forEach((el,i) =>{
           if(i===index) el.classList.add('active');

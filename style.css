@@ -279,7 +279,7 @@ nav a:hover{
     padding: 15px 20px;
 }
 .price_value{
-    font-size: 35px;
+    font-size: 25px;
     letter-spacing: -2px;
     line-height: 64px;
     color: #464646;
@@ -298,7 +298,7 @@ nav a:hover{
     font-weight: 400;
     font-size: 30px;
     width: 30%;
-    color:white;
+    color:black;
 
 }
 .contact_us button{
