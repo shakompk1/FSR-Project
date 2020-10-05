@@ -1,0 +1,24 @@
+{
+  "name": "fsr-project",
+  "version": "1.0.0",
+  "description": "SFR",
+  "main": "js.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shakompk1/FSR-Project.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shakompk1/FSR-Project/issues"
+  },
+  "homepage": "https://github.com/shakompk1/FSR-Project#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1"
+  }
+}

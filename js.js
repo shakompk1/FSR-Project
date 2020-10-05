@@ -39,7 +39,7 @@ let designPrice = [
 let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 
 
- const getData = async(lang)=>{
+ const getData = async()=>{
      let route = window.location.search;
      let test = await fetch(`http://localhost:3000/language${route}`);
      console.log(route);
@@ -76,20 +76,6 @@ let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 }
 getData();
 
-// languages.forEach((el,index) =>{
-//
-//    el.addEventListener('click', ()=>{
-//        if(index===0){
-//         getData('az');
-//        }else
-//        if(index===1){
-//            getData('ru');
-//        }else
-//        if(index===2){
-//            getData('en');
-//        }
-//    });
-// });
 webdevelopment.addEventListener('click',function(){
     serviceTypeChoise.classList.add('web');
     serviceTypeChoise.classList.remove('design');
