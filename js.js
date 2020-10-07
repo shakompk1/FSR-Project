@@ -6,6 +6,7 @@ let contactUsText= document.querySelector('.contact_us p');
 let contactUsInput= document.querySelectorAll('.form input');
 let contactUsTextArea= document.querySelector('.form textarea');
 let serviceTypeChoise = document.querySelector('.serviceTypeChoise');
+let sendButton= document.querySelector('.sendButton');
 let logoService = document.querySelector('.logoService img');
 let serviceLogo = document.querySelectorAll('.serviceLogo');
 let serviceName = document.querySelectorAll('.serviceName');
@@ -110,6 +111,29 @@ design.addEventListener('click',function(){
         else el.classList.remove('active');
     });
 });
+
+sendButton.addEventListener('click', (e) =>{
+    e.preventDefault();
+    const senderName= document.querySelector('.senderName').value;
+    const senderMail= document.querySelector('.senderMail').value;
+    const senderMobile= document.querySelector('.senderMobile').value;
+    const comment= document.querySelector('.comment').value;
+    const senderData = fetch('/feedback',{
+        method:'POST',
+        mode:'cors',
+        cache:'no-cache',
+        headers:{
+            'Content-Type': 'application/json'
+        },
+        body:JSON.stringify({
+           senderName:senderName,
+           senderMail:senderMail,
+           senderMobile:senderMobile,
+           comment:comment
+        })
+    });
+});
+
 
 serviceType.forEach((button,index)=>{
     button.addEventListener('click',()=>{
