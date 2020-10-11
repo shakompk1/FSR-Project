@@ -212,7 +212,7 @@ nav a:hover{
     display: flex;
     justify-content: space-between;
     align-items:center;
-    width: 70%;
+    width: 90%;
     max-height: 450px;
     margin: 0 auto;
     overflow: hidden;
@@ -366,7 +366,36 @@ nav a:hover{
     font-weight: bolder;
 }
 
+.portfolioMainBlock{
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+    border:1px solid red;
+}
 
+.portfolioMainBlockInfo{
+    width: 80%;
+    height:535px;
+    background:#00C0FF;
+}
+
+
+
+.porfolioShortinfo{
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    margin: auto;
+}
+
+.potfolioShortBlockInfo{
+    height: 143px;
+    width: 148px;
+    display: flex;
+    overflow: hidden;
+    transform: translate(0,0);
+    border:1px solid red;
+}
 .contacts{
     display:flex;
     flex-direction: column;
@@ -474,11 +503,7 @@ nav a:hover{
     color: #464646;
 }
 
-.green{
-    background: url('img/pageTwoBg.png') center/cover;
-
-}
-.red{
-    background: url('img/pageOneBg.png') center/cover ;
-}
+.green{background: url('img/pageTwoBg.png') center/cover;}
+.red{background: url('img/pageOneBg.png') center/cover ;}
 .yellow{background:url('img/pageThreeBg.png')  center/cover ;}
+.purple{}
