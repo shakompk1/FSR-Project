@@ -379,21 +379,21 @@ nav a:hover{
     background:#00C0FF;
 }
 
-
-
 .porfolioShortinfo{
-    display: flex;
-    justify-content: space-around;
+    position: relative;
+    overflow: hidden;
     width: 80%;
     margin: auto;
+    height: 143px;
+    border: 1px solid red;
 }
 
 .potfolioShortBlockInfo{
-    height: 143px;
+    position: absolute;
+    height: 143px ;
     width: 148px;
-    display: flex;
     overflow: hidden;
-    transform: translate(0,0);
+    transform: translate3D(0,0,0);
     border:1px solid red;
 }
 .contacts{
