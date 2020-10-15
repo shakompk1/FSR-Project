@@ -79,10 +79,10 @@ nav a:hover{
 }
 
 .title{
-    padding-top: 40px;
-    font-size: 84px;
-    letter-spacing: -2px;
-    line-height: 84px;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 183.8%;
     color: #464646;
     text-align: center;
     text-transform: uppercase;
