@@ -22,10 +22,10 @@ rightButton.addEventListener('click',changePortfolioBlockPosition);
 function changePortfolioBlockPosition(index){
     if(index.path[0].classList.contains('fa-chevron-left')){
         clearInterval(circle);
-        moveElement(true);
+        moveElement(false);
     }else{
         clearInterval(circle);
-        moveElement(false);
+        moveElement(true);
     } 
 }
 
@@ -39,7 +39,7 @@ function moveElement(status){
                 { left : `${positionArr[index]}px`}, 
                 { left: `${positionArr[index] + transform}px` }
             ], {
-                duration: 500,
+                duration: 200,
                 fill: 'forwards'
             });
         });
@@ -47,7 +47,7 @@ function moveElement(status){
             AddElement(status);
             DeleteElement(status);  
             canPushButton  = true;
-        },500);
+        },200);
     }
 }
 
