@@ -1,140 +1,140 @@
 {
-  "az": {
-    "nav": [
-      "Baş səhifə",
-      "Servisler",
-      "Portfolio",
-      "Elage"
-    ],
-    "titles": [
-      "Servisler",
-      "Bizimle Elage"
-    ],
-    "services": [
-      "Veb sayt",
-      "Dizayn"
-    ],
-    "servicesInfoWebText": [
-      "1 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
-      "2 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
-      "3 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir."
-    ],
-    "servicesInfoWebPrice": [
-      "100 AZN",
-      "200 AZN",
-      "300 AZN"
-    ],
-    "servicesInfoDesignText": [
-      "1 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
-      "2 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
-      "3 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir."
-    ],
-    "servicesInfoDesignPrice": [
-      "500 AZN",
-      "600 AZN",
-      "700 AZN"
-    ],
-    "placeholders": [
-      "Ad",
-      "Mobil Nomre",
-      "Elektron unvan"
-    ],
-    "textArea": "Şərh",
-    "bigWord": "Peşəkar",
-    "comment": "HTML SİZİN ÜÇÜN",
-    "contact": "Bizimle Elage",
-    "lang": "az"
-  },
-  "ru": {
-    "nav": [
-      "Главная",
-      "Сервисы",
-      "Портфолио",
-      "Контакты"
-    ],
-    "titles": [
-      "Сервисы",
-      "Связаться с Нами"
-    ],
-    "services": [
-      "Веб сайты",
-      "Дизайн"
-    ],
-    "servicesInfoWebText": [
-      "1 Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
-      "2  Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
-      "3  Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии"
-    ],
-    "servicesInfoWebPrice": [
-      "100 RUB",
-      "200 RUB",
-      "300 RUB"
-    ],
-    "servicesInfoDesignText": [
-      "1 Дизайн Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
-      "2 Дизайн Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
-      "3 Дизайн Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии"
-    ],
-    "servicesInfoDesignPrice": [
-      "500 RUB",
-      "600 RUB",
-      "700 RUB"
-    ],
-    "placeholders": [
-      "Имя",
-      "Номер Телефона",
-      "Электронная почта"
-    ],
-    "textArea": "Комментарий",
-    "bigWord": "Профессиональный",
-    "comment": "HTML ДЛЯ ВАС",
-    "contact": "Связаться с Нами",
-    "lang": "ru"
-  },
-  "en": {
-    "nav": [
-      "Home",
-      "Services",
-      "Portfolio",
-      "Contacts"
-    ],
-    "titles": [
-      "Services",
-      "Contact with Us"
-    ],
-    "services": [
-      "Web layouts",
-      "Design"
-    ],
-    "servicesInfoWebText": [
-      "1 At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
-      "2  At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
-      "3  At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market."
-    ],
-    "servicesInfoWebPrice": [
-      "100 EUR",
-      "200 EUR",
-      "300 EUR"
-    ],
-    "servicesInfoDesignText": [
-      "1 Design At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
-      "2 Design At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
-      "3 Design At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market."
-    ],
-    "servicesInfoDesignPrice": [
-      "500 EUR",
-      "600 EUR",
-      "700 EUR"
-    ],
-    "placeholders": [
-      "Name",
-      "Mobile number",
-      "E-mail"
-    ],
-    "textArea": "Comment",
-    "bigWord": "Professional",
-    "comment": "HTML FOR YOU",
-    "contact": "Contact with Us",
-    "lang": "en"
+    "az": {
+      "nav": [
+        "Baş səhifə",
+        "Servisler",
+        "Portfolio",
+        "Elage"
+      ],
+      "titles": [
+        "Servisler",
+        "Bizimle Elage"
+      ],
+      "services": [
+        "Veb sayt",
+        "Dizayn"
+      ],
+      "servicesInfoWebText": [
+        "1 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+        "2 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+        "3 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir."
+      ],
+      "servicesInfoWebPrice": [
+        "100 AZN",
+        "200 AZN",
+        "300 AZN"
+      ],
+      "servicesInfoDesignText": [
+        "1 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+        "2 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
+        "3 Design bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir."
+      ],
+      "servicesInfoDesignPrice": [
+        "500 AZN",
+        "600 AZN",
+        "700 AZN"
+      ],
+      "placeholders": [
+        "Ad",
+        "Mobil Nomre",
+        "Elektron unvan"
+      ],
+      "textArea": "Şərh",
+      "bigWord": "Peşəkar",
+      "comment": "HTML SİZİN ÜÇÜN",
+      "contact": "Bizimle Elage",
+      "lang": "az"
+    },
+    "ru": {
+      "nav": [
+        "Главная",
+        "Сервисы",
+        "Портфолио",
+        "Контакты"
+      ],
+      "titles": [
+        "Сервисы",
+        "Связаться с Нами"
+      ],
+      "services": [
+        "Веб сайты",
+        "Дизайн"
+      ],
+      "servicesInfoWebText": [
+        "1 Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
+        "2  Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
+        "3  Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии"
+      ],
+      "servicesInfoWebPrice": [
+        "100 RUB",
+        "200 RUB",
+        "300 RUB"
+      ],
+      "servicesInfoDesignText": [
+        "1 Дизайн Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
+        "2 Дизайн Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии",
+        "3 Дизайн Мы умеем делать работающие сайты, web-сервисы и мобильные приложения. Вам понравится и захочется еще! Подробнее на сайте scrum-студии"
+      ],
+      "servicesInfoDesignPrice": [
+        "500 RUB",
+        "600 RUB",
+        "700 RUB"
+      ],
+      "placeholders": [
+        "Имя",
+        "Номер Телефона",
+        "Электронная почта"
+      ],
+      "textArea": "Комментарий",
+      "bigWord": "Профессиональный",
+      "comment": "HTML ДЛЯ ВАС",
+      "contact": "Связаться с Нами",
+      "lang": "ru"
+    },
+    "en": {
+      "nav": [
+        "Home",
+        "Services",
+        "Portfolio",
+        "Contacts"
+      ],
+      "titles": [
+        "Services",
+        "Contact with Us"
+      ],
+      "services": [
+        "Web layouts",
+        "Design"
+      ],
+      "servicesInfoWebText": [
+        "1 At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
+        "2  At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
+        "3  At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market."
+      ],
+      "servicesInfoWebPrice": [
+        "100 EUR",
+        "200 EUR",
+        "300 EUR"
+      ],
+      "servicesInfoDesignText": [
+        "1 Design At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
+        "2 Design At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market.",
+        "3 Design At SFR Web Studio we build powerful e-commerce and product solutions designed to gain clients and drive sales. We bring 10 years of experience working with global brands and successful startups and know what it takes to win in today's digital market."
+      ],
+      "servicesInfoDesignPrice": [
+        "500 EUR",
+        "600 EUR",
+        "700 EUR"
+      ],
+      "placeholders": [
+        "Name",
+        "Mobile number",
+        "E-mail"
+      ],
+      "textArea": "Comment",
+      "bigWord": "Professional",
+      "comment": "HTML FOR YOU",
+      "contact": "Contact with Us",
+      "lang": "en"
+    }
   }
-}

@@ -62,7 +62,12 @@ let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
      });
      titles.forEach((el,index)=>{
         el.innerHTML = '';
-        el.innerHTML = langBase.titles[index];
+        if(index == 0){
+            el.innerHTML = `<div class="emptyDivOne"></div><div class="emptyDivTwo"></div>${langBase.titles[index]}`;
+        }
+        else if(index ==1){
+            el.innerHTML = `<div class="emptyDivThree"></div>${langBase.titles[index]}`;
+        }
      });
      contactUsInput.forEach((el,index) =>{
          el.placeholder = langBase.placeholders[index];

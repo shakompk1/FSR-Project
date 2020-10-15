@@ -20,7 +20,7 @@ header{
 
 header i{
     font-size: 1.5em;
-    color: #464646;;
+    color: #858585;
     cursor: pointer;
 
 }
@@ -68,8 +68,7 @@ nav ul a{
     padding: 5px 15px;
     border-radius: 25px;
     font: italic  1.2em normal;
-    color: #464646;
-    font-style: italic;
+    color: #858585;
     text-decoration: none;
     transition: 1s;
 }
@@ -85,17 +84,68 @@ nav a:hover{
     letter-spacing: -2px;
     line-height: 84px;
     color: #464646;
-    font-style: italic;
     text-align: center;
     text-transform: uppercase;
-
+    
+}
+.portfolioTitle{
+    font-family: BeaufortW01-HeavyItalic;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 183.8%;
+    color: #464646;
+    padding-top: 86px;
+}
+.serviceTitle{
+    background: rgba(216, 224, 255, 0.55);
+    border-radius: 85px;
+    width: 70%;
+    margin: auto;
+    margin-top: 40px;
+    position: relative;
+}
+.contanctTitle{
+    width: 50%;
+    margin: auto;
+    background: rgba(216, 224, 255, 0.55);
+    border-radius: 85px;
+    position: relative;
+}
+.emptyDivOne{
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    left: 20%;
+    top: -15px;
+    background: #F7F8FF;
+    border-radius: 180px;
+}
+.emptyDivTwo{
+    position: absolute;
+    width: 82px;
+    height: 50px;
+    border-radius: 180px;
+    right: -25px;
+    top: 50%;
+    background: #FFFFFF;
+}
+.emptyDivThree{
+    position: absolute;
+    width: 70px;
+    height: 102.16px;
+    left: 0;
+    top: -35px;
+    background: #FFFFFF;
+    border-radius: 151px;
+    transform: rotate(40deg);
 }
 .swiper-container {
     width: 100%;
     height: 100%;
   }
 .swiper-pagination-bullet{
-    background: #0095c3;
+    background: #00C0FF;
     width: 20px;
     height: 20px;
 }
@@ -147,17 +197,17 @@ nav a:hover{
     font-size: 31px;
     letter-spacing: -1px;
     line-height: 31px;
-    color: #000000;
+    color: #464646;
     font-style: italic;
     background-color: transparent;
-    border:1px solid #8adffb;
+    border:3px solid #E8ECFF;
     cursor: pointer;
     text-transform: uppercase;
     transition: .3s;
 }
 .servicesСhoice button:hover{
     border-radius: 0;
-    background-color:#8adffb;
+    background-color:#D8E0FF;
 
 }
 .logoService{
@@ -176,7 +226,7 @@ nav a:hover{
     display: flex;
     justify-content: space-between;
     align-items:center;
-    width: 70%;
+    width: 90%;
     max-height: 450px;
     margin: 0 auto;
     overflow: hidden;
@@ -236,14 +286,14 @@ nav a:hover{
     
 }
 .filledSpan {
-    background-image: linear-gradient(#9bd6ea, #9bd6ea), linear-gradient(#9bd6ea, #9bd6ea), linear-gradient(#9bd6ea, #9bd6ea), linear-gradient(#9bd6ea, #9bd6ea), linear-gradient(to bottom left, transparent calc(50% - 1px), #9bd6ea calc(50% - 1px), #9bd6ea calc(50% + 1px), white calc(50% + 1px)), linear-gradient(white, white), linear-gradient(white, white);
+    background-image: linear-gradient(#D8E0FF, #D8E0FF), linear-gradient(#D8E0FF, #D8E0FF), linear-gradient(#D8E0FF, #D8E0FF), linear-gradient(#D8E0FF, #D8E0FF), linear-gradient(to bottom left, transparent calc(50% - 1px), #D8E0FF calc(50% - 1px), #D8E0FF calc(50% + 1px), white calc(50% + 1px)), linear-gradient(white, white), linear-gradient(white, white);
     background-size: 2px 100%, 2px 100%, 100% 2px, 100% 2px, 25px 25px, 100% 100%, 100% 100%;
     background-position: 0% 0%, 100% 25px, -25px 0%, 0px 100%, 100% 0%, -25px 0%, 100% 25px;
 }
 .active{
     animation: circle 700ms forwards;
     clip-path: circle(25%);
-    background: #8be0fc;
+    background: #D8E0FF;
     color: black;
     font-weight: bolder;
     
@@ -270,30 +320,32 @@ nav a:hover{
     color: #464646;
 }
 .price_block{
-    border:1px solid #8be0fc;
+    border:1px solid #D8E0FF;
     border-radius: 25px;
     width: 30%;
     color: #464646;
     text-align: center;
     padding: 5px 10px;
 }
-.info_block{
-    border:1px solid #8be0fc;
-    border-radius: 5px;
-    color: #464646;
-    text-align: center;
-    padding: 15px 20px;
-}
+
 .price_value{
     font-size: 25px;
     letter-spacing: -2px;
     line-height: 64px;
-    color: #464646;
+    color: #000000;
     font-weight: 500;
 
 }
+
+.info_block{
+    border:1px solid #D8E0FF;
+    border-radius: 5px;
+    color: #000000;
+    text-align: center;
+    padding: 15px 20px;
+}
 .line{
-    border-left: thin solid  #8be0fc;
+    border-left: thin solid  #D8E0FF;
     height: 40px;
 }
 .contact_us{
@@ -304,12 +356,13 @@ nav a:hover{
     font-weight: 400;
     font-size: 30px;
     width: 30%;
-    color:black;
+    color:#000000;
+    text-align: center;
 
 }
 .contact_us button{
     margin-top: 20px;
-    background-color:#8be0fc;
+    background-color:#D8E0FF;
     border:none;
     outline: none;
     color: black;
@@ -327,8 +380,55 @@ nav a:hover{
     font-weight: bolder;
 }
 
-.colorPurple{
-    color:#7857c9;
+.portfolioMainBlock{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    margin: 15px auto;    
+}
+
+.portfolioMainBlock button{
+    width: 66px;
+    height: 91px;
+    border: none;
+    background: none;
+    outline:none ;
+}
+
+.portfolioMainBlock button i{
+    font-size: 3em;
+    color: #b3b4b6;
+    cursor: pointer;
+}
+
+.portfolioMainBlockInfo{
+    width: 80%;
+    height:535px;
+}
+
+.portfolioMainBlockInfo img{
+    width: 100%;
+    height: 100%;
+    background: center/cover no-repeat;
+}
+.activePortfolio{
+    border:3px solid #bdc8ff;
+}
+.porfolioShortinfo{
+    position: relative;
+    overflow: hidden;
+    width: 80%;
+    margin: auto;
+    height: 163px;
+    margin: auto;
+}
+
+.potfolioShortBlockInfo{
+    height: 143px;
+    width: 148px;
+    position: absolute;
+    overflow: hidden;
 }
 
 .contacts{
@@ -352,44 +452,40 @@ nav a:hover{
     display: flex;
     flex-direction: column;
     align-items: center;
-    border:1px solid #515090;
-    box-shadow: -1px 1px 17px 0px rgba(120,87,201,1);
+    border:2px solid #D8E0FF;
     border-radius: 25px;
 }
 
 .contactBlock i{
     margin:25px 0;
-    color: #515090;
+    color: #D8E0FF;
     font-size: 1.8em;
 }
 .contactBlock {
-    color:white;
+    color:#6B6B6B;
 }
 .lineContactLeft{
     width: 231px;
-    border-bottom: 1px solid #7857c9;
-    box-shadow: -1px 1px 17px 0px rgba(120,87,201,1);
+    border-bottom: 1px solid #D8E0FF;
 }
 
 .lineContactTop{
     height: 45px;
-    border-left: 1px solid #7857c9;
-    box-shadow:  -2px 21px 110px -11px #7857c9;
+    border-left: 1px solid #D8E0FF;
     margin: 0;
 }
 
 .smallCompanyName{
     padding: 10px;
-    border: 1px solid #7857c9;
+    border: 1px solid #D8E0FF;
     border-radius: 15px;
-    color:white;
+    color:#6B6B6B;
 }
 
 .contactElemntsBlock{
     display: flex;
     justify-content: space-around;
-    border: 1px solid #7857c9;
-    box-shadow: -1px 1px 17px 0px rgba(120,87,201,1);
+    border: 1px solid #D8E0FF;
     border-radius: 25px;
     padding: 20px;
     background:rgba(0, 0, 0, 0.0);
@@ -409,7 +505,7 @@ nav a:hover{
     height: 40px;
     margin: 10px;
     border-radius: 15px;
-    border: 1px solid #000;
+    border: 1px solid #D8E0FF;
     outline:none;
     padding: 10px;
 }
@@ -431,20 +527,22 @@ nav a:hover{
 }
 .form div:last-child input{
     width: 280px;
-    background:#7857c9;
+    background:#E8ECFF;
     border: none;
     border-bottom-left-radius: 150px;
     border-top-right-radius: 150px;
+    font-family: BeaufortW01-HeavyItalic;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;    
+    color: #464646;
 }
 
-.green{
-    background: url('img/bg2_new.png') center/cover;
+.green{background: url('img/pageTwoBg.png') center/cover;}
+.red{background: url('img/pageOneBg.png') center/cover ;}
+.yellow{background:url('img/pageThreeBg.png')  center/cover ;}
+.purple{background:url('img/pageFourBg.png')  center/cover ;}
 
-}
-.red{
-    background: url('img/bg_new.png') center/cover;
-}
-.yellow{background:url(img/bg_3.jpg)  center/cover;}
 #menu__toggle{
     display: none;
 }
