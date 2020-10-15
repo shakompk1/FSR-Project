@@ -82,7 +82,15 @@ nav a:hover{
     text-transform: uppercase;
     
 }
-
+.portfolioTitle{
+    font-family: BeaufortW01-HeavyItalic;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 64px;
+    line-height: 183.8%;
+    color: #464646;
+    padding-top: 86px;
+}
 .serviceTitle{
     background: rgba(216, 224, 255, 0.55);
     border-radius: 85px;
@@ -369,33 +377,53 @@ nav a:hover{
 .portfolioMainBlock{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     margin: 15px 0;
-    border:1px solid red;
+}
+
+.portfolioMainBlock button{
+    width: 66px;
+    height: 91px;
+    border: none;
+    background: none;
+    outline:none ;
+}
+
+.portfolioMainBlock button i{
+    font-size: 3em;
+    color: #b3b4b6;
+    cursor: pointer;
 }
 
 .portfolioMainBlockInfo{
     width: 80%;
     height:535px;
-    background:#00C0FF;
 }
 
+.portfolioMainBlockInfo img{
+    width: 100%;
+    height: 100%;
+    background: center/cover no-repeat;
+}
+.activePortfolio{
+    border:3px solid #bdc8ff;
+}
 .porfolioShortinfo{
     position: relative;
     overflow: hidden;
     width: 80%;
     margin: auto;
-    height: 143px;
-    border: 1px solid red;
+    height: 163px;
+    margin: auto;
 }
 
 .potfolioShortBlockInfo{
-    position: absolute;
-    height: 143px ;
+    height: 143px;
     width: 148px;
+    position: absolute;
     overflow: hidden;
-    transform: translate3D(0,0,0);
-    border:1px solid red;
 }
+
 .contacts{
     display:flex;
     flex-direction: column;
@@ -506,4 +534,4 @@ nav a:hover{
 .green{background: url('img/pageTwoBg.png') center/cover;}
 .red{background: url('img/pageOneBg.png') center/cover ;}
 .yellow{background:url('img/pageThreeBg.png')  center/cover ;}
-.purple{}
+.purple{background:url('img/pageFourBg.png')  center/cover ;}
