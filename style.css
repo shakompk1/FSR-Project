@@ -720,6 +720,9 @@ nav a:hover{
     .price_block{
         width: 200px;
     }
+    .line:nth-last-child(2){
+        display: none;
+    }
     .info_block{
         width: 325px;
         border:none;
