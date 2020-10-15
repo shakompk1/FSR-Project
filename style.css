@@ -376,9 +376,10 @@ nav a:hover{
 
 .portfolioMainBlock{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
-    margin: 15px 0;
+    width: 80%;
+    margin: 15px auto;    
 }
 
 .portfolioMainBlock button{
