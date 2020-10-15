@@ -166,14 +166,15 @@ serviceType.forEach((button,index)=>{
         }
         serviceName.forEach((el,i) =>{
           if(i===index) el.classList.add('active');
-          else el.classList.remove('active');       
+          else el.classList.remove('active');     
         });
+        let width = screen.width
         serviceType.forEach((b,i)=>{
                 if(i == 0){
                     b.animate([
                         // keyframes
                         { }, 
-                        { transform: `translate3D(0, ${count}, 0)` }
+                        { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
                     ], {
                         // timing options
                         duration: speed,
@@ -184,7 +185,7 @@ serviceType.forEach((button,index)=>{
                     b.animate([
                         // keyframes
                         { }, 
-                        { transform: `translate3D(0, ${count}, 0)` }
+                        { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
                     ], {
                         // timing options
                         duration: speed,
@@ -195,7 +196,7 @@ serviceType.forEach((button,index)=>{
                     b.animate([
                         // keyframes
                         { }, 
-                        { transform: `translate3D(0, ${count}, 0)` }
+                        { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
                     ], {
                         // timing options
                         duration: speed,
@@ -206,13 +207,14 @@ serviceType.forEach((button,index)=>{
     });
 });
 function restarAnimation(){
+    let width = screen.width
     let speed = 300;
     let count = '100%';
     serviceType.forEach((b,i)=>{
         b.animate([
             // keyframes
             { }, 
-            { transform: `translate3D(0, ${count}, 0)` }
+            { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
         ], {
             // timing options
             duration: speed,

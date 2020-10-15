@@ -8,7 +8,6 @@ let circle = setInterval(() => {
     moveElement()
 }, 5000);
 
-console.log(leftButton);
 let divArr = [];
 let divBlockArr = []
 let positionArr = [];
