@@ -140,6 +140,9 @@ nav a:hover{
     border-radius: 151px;
     transform: rotate(40deg);
 }
+.infoMobile{
+    display: none;
+}
 .swiper-container {
     width: 100%;
     height: 100%;
@@ -215,7 +218,6 @@ nav a:hover{
     text-align: center;
     margin: 180px 0;
 }
-
 .logoService img{
     transform: translate(-50%,0);
     height: 300px;
@@ -258,6 +260,7 @@ nav a:hover{
 
 
 .serviceName{
+    width: 100%;
     color:white;
     text-align: center;
     padding-left: 30px;
@@ -271,13 +274,13 @@ nav a:hover{
     position: relative;
 }
 .outerBlock{
-    display: flex !important;
+    display: flex;
     justify-content: center;
     align-items:center;
     position: absolute;
     left: 50%;
     padding: 10px !important;
-    width: 127px !important;
+    width: 127px;
     height: 127px;
     background-image: linear-gradient(to bottom left, transparent 50%, white 50%), linear-gradient(white, white), linear-gradient(white, white);
     background-size: 25px 25px, 100% 100%, 100% 100%;
@@ -299,7 +302,6 @@ nav a:hover{
     
 }
 .serviceType span{
-    width: 100%;
     padding-top: 25px;
     padding-bottom: 25px;
     text-align: left;
@@ -531,7 +533,6 @@ nav a:hover{
     border: none;
     border-bottom-left-radius: 150px;
     border-top-right-radius: 150px;
-    font-family: BeaufortW01-HeavyItalic;
     font-style: normal;
     font-weight: 900;
     font-size: 24px;    
@@ -577,6 +578,93 @@ nav a:hover{
     }
     .contactsShortInfo{
         flex-direction: column;
+    }
+    .contact_us{
+        display: none;
+    }
+    .logoService{
+        height: auto;
+        margin-top: 180px;
+        margin-bottom: -100px;
+    }
+    .logoService img{
+        width: 80px;
+        height: 80px;
+    }
+    .infoMobile{
+        display: block;
+        width: 100%;
+        height: 80px;
+    }
+    .infoMobile .info_block{
+        display: block;
+        border: none;
+        width: 100%;
+        padding: 5px 10px;
+    }
+    .servicesСhoice{
+        display: none;
+    }
+    .filled{
+        background: none;
+    }
+    .line{
+        height: 70px;
+    }
+    .services{
+        background: none;
+        border: 1px solid #C7C7C7;
+        flex-direction: column-reverse;
+        padding-bottom: 100px;
+        max-height: 100%;
+    }
+    .serviceTypeChoise{
+        flex-direction: row;
+        width: 100%;
+        padding-bottom: 100px;
+        margin-top: -50px;
+    }
+    .info_block{
+        display: none;
+    }
+    .price_block{
+        width: 100%;
+    }
+    .price_value{
+        font-size:16px;
+        line-height: 40px;
+    }
+    .outerBlock{
+        width: 80px;
+        height: 80px;
+        position: static;
+        left: 0;
+    }
+    .serviceType span{
+        padding: 0;
+        display: block;
+        text-align: center;
+    }
+    .serviceName{
+        margin-bottom: -30px;
+        width: 100%;
+        padding: 0;
+    }
+    .serviceLogo{
+        width: 50px;
+        height: 50px;
+    }
+    .line-2{
+        display: none;
+    }
+    .serviceType{
+        flex-direction: column-reverse;
+        transform: translate3d(100%,100%, 0);
+        height:auto;
+        width: 100%;
+    }
+    .serviceInfo{
+        padding:0;
     }
     .title{
         padding-top: 20px;
