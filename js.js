@@ -41,7 +41,7 @@ let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
 
  const getData = async()=>{
      let route = window.location.search;
-     let test = await fetch(`http://localhost:3000/language${route}`);
+     let test = await fetch(`/language${route}`);
      console.log(route);
      let langBase = await test.json();
 
@@ -168,13 +168,13 @@ serviceType.forEach((button,index)=>{
           if(i===index) el.classList.add('active');
           else el.classList.remove('active');     
         });
-        let width = screen.width
+        const mediaQuery = window.matchMedia('(max-width: 480px)');
         serviceType.forEach((b,i)=>{
                 if(i == 0){
                     b.animate([
                         // keyframes
-                        { }, 
-                        { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
+                        { },
+                        { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
                     ], {
                         // timing options
                         duration: speed,
@@ -184,24 +184,24 @@ serviceType.forEach((button,index)=>{
                 if(i == 1){
                     b.animate([
                         // keyframes
-                        { }, 
-                        { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
+                        { },
+                        { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
                     ], {
                         // timing options
                         duration: speed,
                         fill: 'forwards'
-                    }); 
+                    });
                 }
                 if(i == 2){
                     b.animate([
                         // keyframes
-                        { }, 
-                        { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
+                        { },
+                        { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
                     ], {
                         // timing options
                         duration: speed,
                         fill: 'forwards'
-                    }); 
+                    });
                 }
             });        
     });
@@ -210,15 +210,16 @@ function restarAnimation(){
     let width = screen.width
     let speed = 300;
     let count = '100%';
+    const mediaQuery = window.matchMedia('(max-width: 480px)');
     serviceType.forEach((b,i)=>{
-        b.animate([
-            // keyframes
-            { }, 
-            { transform: `translate3D(${width<480?count+',0':'0,'+count}, 0)` }
-        ], {
-            // timing options
-            duration: speed,
-            fill: 'forwards'
-        }); 
+            b.animate([
+                // keyframes
+                { },
+                { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
+            ], {
+                // timing options
+                duration: speed,
+                fill: 'forwards'
+            });
     });
 }

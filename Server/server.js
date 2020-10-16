@@ -4,6 +4,7 @@ const path =require('path');
 const nodemailer = require('nodemailer');
 const langData = require('../lang.json');
 const bodyParser = require("body-parser");
+const PORT = 5500;
 const cors = require("cors");
 
 
@@ -71,6 +72,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname,'../index.htm'))
 });
 
-app.listen(3000,function () {
-    console.log('server start on port 3000')
+app.listen(PORT,function () {
+    console.log(`server start on port ${PORT}`)
 })
