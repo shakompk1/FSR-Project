@@ -2,13 +2,12 @@ let leftButton = document.querySelector('.portfolioMainBlockLeftButton i');
 let rightButton = document.querySelector('.portfolioMainBlockRightButton i');
 let mainBlock = document.querySelector('.portfolioMainBlockInfo');
 let porfolio = document.querySelector('.porfolioShortinfo');
-let infoArr = ['img/ae.jpg','img/pes.jpg','img/type.jpg','img/ps.png','img/ae.jpg','img/pes.jpg','img/type.jpg','img/dog.jpg','img/hamster.jpg','img/figma.png','img/ae.jpg','img/ae.jpg','img/ae.jpg','img/ae.jpg'];
+let infoArr = [{id:1 , slideBlockImg:'img/ae.jpg' , decstopVersion :'img/pes.jpg'},{id:2 , slideBlockImg:'img/pes.jpg', decstopVersion :'img/ae.jpg'},{id:3 , slideBlockImg:'img/type.jpg',decstopVersion :'img/pes.jpg'},{id:4 , slideBlockImg:'img/ps.png',decstopVersion :'img/type.jpg'},{id:5 , slideBlockImg:'img/ae.jpg',decstopVersion :'img/pes.jpg'},{id:6 , slideBlockImg:'img/pes.jpg',decstopVersion :'img/pes.jpg'},{id:7 , slideBlockImg:'img/type.jpg',decstopVersion :'img/pes.jpg'},{id:8 , slideBlockImg:'img/dog.jpg',decstopVersion :'img/pes.jpg'},{id:9 , slideBlockImg:'img/hamster.jpg',decstopVersion :'img/pes.jpg'},{id:10 , slideBlockImg:'img/figma.png',decstopVersion :'img/pes.jpg'},{id:11 , slideBlockImg:'img/ae.jpg',decstopVersion :'img/pes.jpg'},{id:12 , slideBlockImg:'img/ae.jpg',decstopVersion :'img/pes.jpg'},{id:13 , slideBlockImg:'img/ae.jpg',decstopVersion :'img/pes.jpg'},{id:14 , slideBlockImg:'img/ae.jpg',decstopVersion :'img/pes.jpg'}];
 
 let circle = setInterval(() => {
     moveElement()
 }, 5000);
 
-console.log(leftButton);
 let divArr = [];
 let divBlockArr = []
 let positionArr = [];
@@ -22,13 +21,12 @@ rightButton.addEventListener('click',changePortfolioBlockPosition);
 function changePortfolioBlockPosition(index){
     if(index.path[0].classList.contains('fa-chevron-left')){
         clearInterval(circle);
-        moveElement(false);
+        moveElement(true);
     }else{
         clearInterval(circle);
-        moveElement(true);
+        moveElement(false);
     } 
 }
-
 
 function moveElement(status){
     if(canPushButton){
@@ -36,10 +34,10 @@ function moveElement(status){
         transform = status?-168:168;
         divArr.forEach((element ,index)=>{
             element.animate([
-                { left : `${positionArr[index]}px`}, 
-                { left: `${positionArr[index] + transform}px` }
+                { left : `${+positionArr[index]}px`}, 
+                { left: `${+positionArr[index] + transform}px` }
             ], {
-                duration: 200,
+                duration: 500,
                 fill: 'forwards'
             });
         });
@@ -47,7 +45,7 @@ function moveElement(status){
             AddElement(status);
             DeleteElement(status);  
             canPushButton  = true;
-        },200);
+        },500);
     }
 }
 
@@ -93,7 +91,8 @@ function DeleteElement(status){
 function CreatElement(){
     for(let i = 0;i<infoArr.length;i++){
         let img = document.createElement('img');
-        img.src = `${infoArr[i]}`;
+        img.src = `${infoArr[i].slideBlockImg}`;
+        img.name =`${infoArr[i].id}`
         img.classList.add('potfolioShortBlockInfo');
         divArr.push(img);
     }
@@ -103,7 +102,12 @@ function CreatElement(){
 function ShowImgMainBlock(){
     mainBlock.innerHTML ="";
     let img = document.createElement('img');
-    img.src = divArr[1].src;
+    for (let i = 0; i < infoArr.length; i++) {
+        if(divArr[1].name == infoArr[i].id){    
+            img.src = infoArr[i].decstopVersion;
+        }
+    }
     mainBlock.append(img);
 }
+
 CreatElement();

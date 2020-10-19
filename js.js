@@ -166,7 +166,7 @@ serviceType.forEach((button,index)=>{
         }
         serviceName.forEach((el,i) =>{
           if(i===index) el.classList.add('active');
-          else el.classList.remove('active');       
+          else el.classList.remove('active');     
         });
         const mediaQuery = window.matchMedia('(max-width: 480px)');
         serviceType.forEach((b,i)=>{
@@ -207,6 +207,7 @@ serviceType.forEach((button,index)=>{
     });
 });
 function restarAnimation(){
+    let width = screen.width
     let speed = 300;
     let count = '100%';
     const mediaQuery = window.matchMedia('(max-width: 480px)');
