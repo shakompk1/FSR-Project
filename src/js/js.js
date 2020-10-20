@@ -14,7 +14,7 @@ let navMenu = document.querySelectorAll('nav a');
 let titles = document.querySelectorAll('.title');
 let priceBlock = document.querySelector('.price_value');
 let infoBlock = document.querySelector('.info_value');
-let webImages =['img/html_pt.png','img/hamster.jpg','img/pes.jpg'];
+let webImages =['./src/img/html_pt.png','./src/img/hamster.jpg','./src/img/pes.jpg'];
 
 let webText = [
     "1 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
@@ -36,7 +36,7 @@ let designPrice = [
     "600 AZN",
     "700 AZN"
 ];
-let designImages =['img/ps.png','img/figma.png','img/ae.jpg'];
+let designImages =['./src/img/ps.png','./src/img/figma.png','./src/img/ae.jpg'];
 
 
  const getData = async()=>{
@@ -92,7 +92,7 @@ webdevelopment.addEventListener('click',function(){
        }
        else el.classList.remove('active');
     });
-    logoService.src="img/type.jpg";
+    logoService.src="./src/img/type.jpg";
     serviceLogo.forEach((img,i)=>{
         img.src = webImages[i];
     });
@@ -102,7 +102,7 @@ webdevelopment.addEventListener('click',function(){
 design.addEventListener('click',function(){
     serviceTypeChoise.classList.add('design');
     serviceTypeChoise.classList.remove('web')
-    logoService.src="img/ps.png";
+    logoService.src="./src/img/ps.png";
     serviceLogo.forEach((img,i)=>{
         img.src = designImages[i];
     });
