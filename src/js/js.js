@@ -14,7 +14,9 @@ let navMenu = document.querySelectorAll('nav a');
 let titles = document.querySelectorAll('.title');
 let priceBlock = document.querySelector('.price_value');
 let infoBlock = document.querySelector('.info_value');
+
 let webImages =['./src/img/html_pt.png','./src/img/hamster.jpg','./src/img/pes.jpg'];
+let designImages =['./src/img/ps.png','./src/img/figma.png','./src/img/ae.jpg'];
 
 let webText = [
     "1 bizim işimiz yalnız web-dizayndan ibarət deyil. bura 360° digital xidmət agentliyidir. layihələrimizdə strategiya,təcrübəsi, dizayn, proqram, sosial media və seo komandaları ortaya mükəmməl iş çıxarmaq üçün vahid orqan kimi işləyir. veb-dizayn yüksək səviyyəli işlərimizdən yalnız biridir.",
@@ -36,13 +38,10 @@ let designPrice = [
     "600 AZN",
     "700 AZN"
 ];
-let designImages =['./src/img/ps.png','./src/img/figma.png','./src/img/ae.jpg'];
-
-
+//  Languages start
  const getData = async()=>{
      let route = window.location.search;
      let test = await fetch(`/language${route}`);
-     console.log(route);
      let langBase = await test.json();
 
      let innerText = langBase.comment;
@@ -80,7 +79,9 @@ let designImages =['./src/img/ps.png','./src/img/figma.png','./src/img/ae.jpg'];
      });
 }
 getData();
+//  Languages end
 
+//Third block buttons listener and animation start
 webdevelopment.addEventListener('click',function(){
     serviceTypeChoise.classList.add('web');
     serviceTypeChoise.classList.remove('design');
@@ -117,29 +118,6 @@ design.addEventListener('click',function(){
     });
 });
 
-sendButton.addEventListener('click', (e) =>{
-    e.preventDefault();
-    const senderName= document.querySelector('.senderName').value;
-    const senderMail= document.querySelector('.senderMail').value;
-    const senderMobile= document.querySelector('.senderMobile').value;
-    const comment= document.querySelector('.comment').value;
-    const senderData = fetch('/feedback',{
-        method:'POST',
-        mode:'cors',
-        cache:'no-cache',
-        headers:{
-            'Content-Type': 'application/json'
-        },
-        body:JSON.stringify({
-           senderName:senderName,
-           senderMail:senderMail,
-           senderMobile:senderMobile,
-           comment:comment
-        })
-    });
-});
-
-
 serviceType.forEach((button,index)=>{
     button.addEventListener('click',()=>{
         serviceType.forEach(el =>{
@@ -165,45 +143,45 @@ serviceType.forEach((button,index)=>{
             button.classList.add('selected');
         }
         serviceName.forEach((el,i) =>{
-          if(i===index) el.classList.add('active');
-          else el.classList.remove('active');     
+            if(i===index) el.classList.add('active');
+            else el.classList.remove('active');
         });
         const mediaQuery = window.matchMedia('(max-width: 480px)');
         serviceType.forEach((b,i)=>{
-                if(i == 0){
-                    b.animate([
-                        // keyframes
-                        { },
-                        { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
-                    ], {
-                        // timing options
-                        duration: speed,
-                        fill: 'forwards'
-                    });
-                }
-                if(i == 1){
-                    b.animate([
-                        // keyframes
-                        { },
-                        { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
-                    ], {
-                        // timing options
-                        duration: speed,
-                        fill: 'forwards'
-                    });
-                }
-                if(i == 2){
-                    b.animate([
-                        // keyframes
-                        { },
-                        { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
-                    ], {
-                        // timing options
-                        duration: speed,
-                        fill: 'forwards'
-                    });
-                }
-            });        
+            if(i == 0){
+                b.animate([
+                    // keyframes
+                    { },
+                    { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
+                ], {
+                    // timing options
+                    duration: speed,
+                    fill: 'forwards'
+                });
+            }
+            if(i == 1){
+                b.animate([
+                    // keyframes
+                    { },
+                    { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
+                ], {
+                    // timing options
+                    duration: speed,
+                    fill: 'forwards'
+                });
+            }
+            if(i == 2){
+                b.animate([
+                    // keyframes
+                    { },
+                    { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
+                ], {
+                    // timing options
+                    duration: speed,
+                    fill: 'forwards'
+                });
+            }
+        });
     });
 });
 function restarAnimation(){
@@ -212,14 +190,110 @@ function restarAnimation(){
     let count = '100%';
     const mediaQuery = window.matchMedia('(max-width: 480px)');
     serviceType.forEach((b,i)=>{
-            b.animate([
-                // keyframes
-                { },
-                { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
-            ], {
-                // timing options
-                duration: speed,
-                fill: 'forwards'
-            });
+        b.animate([
+            // keyframes
+            { },
+            { transform: `${mediaQuery.matches?`translate3D(${count},100%, 0)`:`translate3D(0, ${count}, 0)` }`}
+        ], {
+            // timing options
+            duration: speed,
+            fill: 'forwards'
+        });
     });
 }
+//Third block buttons listener and animation end
+
+
+//Form validation and logic
+sendButton.addEventListener('click', (e) =>{
+    e.preventDefault();
+    const senderName= document.querySelector('.senderName');
+    const senderMail= document.querySelector('.senderMail');
+    const senderMobile= document.querySelector('.senderMobile');
+    const comment= document.querySelector('.comment');
+    const nameVal= document.querySelector('.nameError');
+    const mobVal= document.querySelector('.mobError');
+    const mailVal= document.querySelector('.mailError');
+    const textVal= document.querySelector('.textError');
+    let nameCheck = false;
+    let mobCheck = false;
+    let mailCheck = false;
+    let textCheck = false;
+
+    if(senderName.value === "" || !senderName.value.replace(/\s/g, '').length){
+        nameVal.style.visibility = 'visible';
+        senderName.classList.add('error')
+        console.log('error');
+    }
+    else{
+        nameVal.style.visibility = 'hidden';
+        senderName.classList.remove('error');
+        nameCheck = true;
+    }
+    if(senderMobile.value === "" || !senderMobile.value.replace(/\s/g, '').length){
+        mobVal.style.visibility = 'visible';
+        senderMobile.classList.add('error')
+        console.log('error');
+    }
+    else{
+        mobVal.style.visibility = 'hidden';
+        senderMobile.classList.remove('error')
+        mobCheck = true;
+    }
+    if(senderMail.value === "" || !senderMail.value.replace(/\s/g, '').length){
+        mailVal.style.visibility = 'visible';
+        senderMail.classList.add('error')
+        // if(mobCheck) senderMobile.style.marginTop ='25px';
+        // else senderMobile.style.marginTop ='10px';
+    }
+    else{
+        mailVal.style.visibility = 'hidden';
+        
+        senderMail.classList.remove('error');
+        mailCheck = true;
+        // senderMobile.style.marginTop ='10px';
+    }
+    if(comment.value === "" || !comment.value.replace(/\s/g, '').length){
+        textVal.style.visibility = 'visible';
+        comment.classList.add('error')
+        console.log('error');
+    }
+    else{
+        textVal.style.visibility = 'hidden';
+        comment.classList.remove('error');
+        textCheck = true;
+    }
+
+    if(nameCheck && mobCheck && mailCheck && textCheck ){
+        fetch('/feedback',{
+            method:'POST',
+            mode:'cors',
+            cache:'no-cache',
+            headers:{
+                'Content-Type': 'application/json'
+            },
+            body:JSON.stringify({
+                senderName:senderName.value,
+                senderMail:senderMail.value,
+                senderMobile:senderMobile.value,
+                comment:comment.value
+            })
+        }).then(res => {
+            senderName.value = '';
+            senderMobile.value = '';
+            senderMail.value = '';
+            comment.value = '';
+            console.log(res);
+           return  res.json();
+        });
+        swal({
+            title: "Thank you",
+            text: "your message sent successfully",
+            icon: "success",
+            button: "OK",
+        });
+    }
+
+});
+
+

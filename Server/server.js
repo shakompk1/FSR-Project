@@ -2,9 +2,9 @@ const express = require('express');
 const app = express();
 const path =require('path');
 const nodemailer = require('nodemailer');
-const langData = require('../lang.json');
+const langData = require('../src/json/lang.json');
 const bodyParser = require("body-parser");
-const PORT = 5500;
+const PORT = 3000;
 const cors = require("cors");
 
 
@@ -56,6 +56,7 @@ app.post('/feedback', function (req, res) {
             console.log("Email sent:" + info.response);
         }
     })
+    res.send('OK');
 });
 
 app.get('/language',(req,res) =>{

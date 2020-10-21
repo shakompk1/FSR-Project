@@ -498,7 +498,8 @@ nav a:hover{
     flex-direction: column;
     padding: 0 15px;
 }
-.form div{
+.form .mainDiv{
+    display: flex;
     margin-bottom: 5px;
 }
 
@@ -512,7 +513,11 @@ nav a:hover{
     padding: 10px;
 }
 
-
+.numberInput, .mailInput, .nameInput, .textInput{
+    display: flex;
+    flex-direction: column;
+    margin-top: -1px;
+}
 .form div textarea{
     width: 100%;
     height: 250px;
@@ -527,7 +532,7 @@ nav a:hover{
     display: flex;
     justify-content: flex-end;
 }
-.form div:last-child input{
+.form .sendButton{
     width: 280px;
     background:#E8ECFF;
     border: none;
@@ -547,7 +552,15 @@ nav a:hover{
 #menu__toggle{
     display: none;
 }
-
+.error{
+    border: 1px solid crimson !important;
+}
+.nameError,.mobError,.mailError,.textError{
+    visibility: hidden;
+    color: crimson;
+    text-align: left;
+    margin-left: 10px;
+}
 
 @media (min-width: 320px) and (max-width: 480px) {
     .red{background: url('../img/bg1_mob.png') center/cover ;}
