@@ -67,7 +67,11 @@ nav ul a{
     margin: 0 5px;
     padding: 5px 15px;
     border-radius: 25px;
-    font: italic  1.2em normal;
+    font-family: 'Beaufort';
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 900;
+    text-transform: uppercase;
     color: #858585;
     text-decoration: none;
     transition: 1s;
@@ -79,25 +83,28 @@ nav a:hover{
 }
 
 .title{
-    font-style: normal;
-    font-weight: 900;
-    font-size: 64px;
-    line-height: 183.8%;
+    font-family: 'Beaufort';
+    font-weight :900;
+    font-style :normal;
     color: #464646;
     text-align: center;
     text-transform: uppercase;
     
 }
 .portfolioTitle{
-    font-family: BeaufortW01-HeavyItalic;
-    font-style: normal;
-    font-weight: 900;
+    font-family: 'Beaufort';
+    font-weight :900;
+    font-style :normal;
     font-size: 64px;
     line-height: 183.8%;
     color: #464646;
     padding-top: 86px;
 }
 .serviceTitle{
+    font-family: 'Beaufort';
+    font-weight :900;
+    font-style :normal;
+    font-size: 64px;
     background: rgba(216, 224, 255, 0.55);
     border-radius: 85px;
     width: 70%;
@@ -106,6 +113,10 @@ nav a:hover{
     position: relative;
 }
 .contanctTitle{
+    font-family: 'Beaufort';
+    font-weight :900;
+    font-style :normal;
+    font-size: 64px;
     width: 50%;
     margin: auto;
     background: rgba(216, 224, 255, 0.55);
@@ -201,7 +212,9 @@ nav a:hover{
     letter-spacing: -1px;
     line-height: 31px;
     color: #464646;
-    font-style: italic;
+    font-family: 'Beaufort';
+    font-weight :900;
+    font-style :normal;
     background-color: transparent;
     border:3px solid #E8ECFF;
     cursor: pointer;
@@ -253,6 +266,10 @@ nav a:hover{
     align-items:center;
     align-content: center;
     transform: translate3d(0%,  100%, 0);
+    font-family: 'Beaufort';
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 900;
     width: 100%;
     height: 140px;
     margin: 10px 0;
@@ -331,6 +348,9 @@ nav a:hover{
 }
 
 .price_value{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: bold;
     font-size: 25px;
     letter-spacing: -2px;
     line-height: 64px;
@@ -340,6 +360,9 @@ nav a:hover{
 }
 
 .info_block{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-style: bold;
     border:1px solid #D8E0FF;
     border-radius: 5px;
     color: #000000;
@@ -355,7 +378,10 @@ nav a:hover{
     justify-content: center;
     align-items:center;
     flex-direction: column;
-    font-weight: 400;
+    font-family: 'Beaufort';
+    font-size: 61px;
+    font-style: normal;
+    font-weight: 900;
     font-size: 30px;
     width: 30%;
     color:#000000;
@@ -368,7 +394,10 @@ nav a:hover{
     border:none;
     outline: none;
     color: black;
-    font-size: 35px;
+    font-family: 'Beaufort';
+    font-size: 31px;
+    font-style: normal;
+    font-weight: 900;
     border-radius: 30px;
     padding: 5px 15px;
     transition: .5s;
@@ -463,7 +492,11 @@ nav a:hover{
     color: #D8E0FF;
     font-size: 1.8em;
 }
-.contactBlock {
+.contactBlock p{
+    font-family: 'Roboto';
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 400;
     color:#6B6B6B;
 }
 .lineContactLeft{
@@ -504,6 +537,10 @@ nav a:hover{
 }
 
 .form div input{
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
     width: 330px;
     height: 40px;
     margin: 10px;
@@ -519,6 +556,10 @@ nav a:hover{
     margin-top: -1px;
 }
 .form div textarea{
+    font-family: 'Roboto';
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
     width: 100%;
     height: 250px;
     border-radius: 15px;
@@ -535,15 +576,16 @@ nav a:hover{
 .form .sendButton{
     display: flex;
     justify-content: center;
-    align-items: center;  
-    width: 280px;
-    background:#E8ECFF;
-    border: none;
-    border-bottom-left-radius: 150px;
-    border-top-right-radius: 150px;
+    align-items: center;
+    font-family: 'Beaufort';
+    font-size: 30px;
     font-style: normal;
     font-weight: 900;
-    font-size: 24px;    
+    width: 280px;
+    background:#E8ECFF;
+    border: 1px solid red;
+    border-bottom-left-radius: 150px;
+    border-top-right-radius: 150px;
     color: #464646;
 }
 
