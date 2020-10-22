@@ -533,6 +533,9 @@ nav a:hover{
     justify-content: flex-end;
 }
 .form .sendButton{
+    display: flex;
+    justify-content: center;
+    align-items: center;  
     width: 280px;
     background:#E8ECFF;
     border: none;
