@@ -1,7 +1,11 @@
 let leftButton = document.querySelector('.portfolioMainBlockLeftButton i');
 let rightButton = document.querySelector('.portfolioMainBlockRightButton i');
 let mainBlock = document.querySelector('.portfolioMainBlockInfo');
+let deviceChose = document.querySelectorAll('.choseDevice button');
 let porfolio = document.querySelector('.porfolioShortinfo');
+let tablet =  document.querySelector('.tablet');
+let smartphone =  document.querySelector('.smartphone');
+let laptop = document.querySelector('.laptop');
 let infoArr = [{id:1 , slideBlockImg:'./src/img/pes.jpg' , decstopVersion :'./src/img/pes.jpg'},{id:2 , slideBlockImg:'./src/img/pes.jpg', decstopVersion :'./src/img/ae.jpg'},{id:3 , slideBlockImg:'./src/img/type.jpg',decstopVersion :'./src/img/pes.jpg'},{id:4 , slideBlockImg:'./src/img/ps.png',decstopVersion :'./src/img/type.jpg'},{id:5 , slideBlockImg:'./src/img/ae.jpg',decstopVersion :'./src/img/pes.jpg'},{id:6 , slideBlockImg:'./src/img/pes.jpg',decstopVersion :'./src/img/pes.jpg'},{id:7 , slideBlockImg:'./src/img/type.jpg',decstopVersion :'./src/img/pes.jpg'},{id:8 , slideBlockImg:'./src/img/dog.jpg',decstopVersion :'./src/img/pes.jpg'},{id:9 , slideBlockImg:'./src/img/hamster.jpg',decstopVersion :'./src/img/pes.jpg'},{id:10 , slideBlockImg:'./src/img/figma.png',decstopVersion :'./src/img/pes.jpg'},{id:11 , slideBlockImg:'./src/img/ae.jpg',decstopVersion :'./src/img/pes.jpg'},{id:12 , slideBlockImg:'./src/img/ae.jpg',decstopVersion :'img/pes.jpg'},{id:13 , slideBlockImg:'./src/img/ae.jpg',decstopVersion :'./src/img/pes.jpg'},{id:14 , slideBlockImg:'./src/img/ae.jpg',decstopVersion :'./src/img/pes.jpg'}];
 
 let circle = setInterval(() => {
@@ -28,6 +32,20 @@ function changePortfolioBlockPosition(index){
     } 
 }
 
+deviceChose.forEach((element,index )=> {
+    element.addEventListener('click',()=>{
+        tablet.classList.remove('activeDevice');
+        smartphone.classList.remove('activeDevice');
+        laptop.classList.remove('activeDevice');
+        if(index == 0){
+            smartphone.classList.add('activeDevice');
+        }else if(index == 1){
+            laptop.classList.add('activeDevice');
+        }else if(index ==2){
+            tablet.classList.add('activeDevice');
+        }
+    })
+});
 function moveElement(status){
     if(canPushButton){
         canPushButton = false;
@@ -100,14 +118,23 @@ function CreatElement(){
 }
 
 function ShowImgMainBlock(){
-    mainBlock.innerHTML ="";
-    let img = document.createElement('img');
+    tablet.innerHTML ="";
+    smartphone.innerHTML ="";
+    laptop.innerHTML ="";
+    let img1 = document.createElement('img');
+    let img2 = document.createElement('img');
+    let img3 = document.createElement('img');
     for (let i = 0; i < infoArr.length; i++) {
         if(divArr[1].name == infoArr[i].id){    
-            img.src = infoArr[i].decstopVersion;
+            img1.src = infoArr[i].decstopVersion;
+            img2.src = infoArr[i].decstopVersion;
+            img3.src = infoArr[i].decstopVersion;
         }
     }
-    mainBlock.append(img);
+    tablet.append(img1);
+    smartphone.append(img2);
+    laptop.append(img3);
 }
 
 CreatElement();
+
