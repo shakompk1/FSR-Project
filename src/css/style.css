@@ -635,9 +635,9 @@ nav a:hover{
     visibility: hidden;
 }
 @media (min-width: 320px) and (max-width: 480px) {
-    .red{background: url('../img/bg1_mob.png') center/cover ;}
+    /* .red{background: url('../img/bg1_mob.png') center/cover ;}
     .green{background: url('../img/bg3_mob.png') center/cover;}
-    .yellow{background:url('../img/bg4_mob.png')  center/cover ;}
+    .yellow{background:url('../img/bg4_mob.png')  center/cover ;} */
     .emptyDivOne,.emptyDivTwo,.emptyDivThree{
         display: none;
     }
