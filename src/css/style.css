@@ -305,7 +305,7 @@ nav a:hover{
     border-radius: 25px;
 }
 .price_value{
-    font:bold 500 25px/64px 'Roboto', sans-serif;
+    font:normal 500 25px/64px 'Roboto';
     letter-spacing: -2px;
     color: #000000;
 
