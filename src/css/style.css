@@ -4,9 +4,8 @@
     box-sizing: border-box;
 }
 .container{
-    width: 80%;
-    min-height: 800px;
-    min-height: 100vh;
+    width: 100%;
+   height:auto;
     margin: auto;
 }
 header{
@@ -68,7 +67,9 @@ nav a:hover{
     color:black;
 }
 .title{
-    font:italic 900 'Roboto';
+    font-style: italic;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
     color: #464646;
     text-align: center;
     text-transform: uppercase;
@@ -311,7 +312,8 @@ nav a:hover{
 }
 .info_block{
     padding: 15px 20px;
-    font-family:bold 400 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif;
+    font-weight: bold;
     color: #000000;
     text-align: center;
     border:1px solid #D8E0FF;
@@ -327,7 +329,7 @@ nav a:hover{
     align-items:center;
     flex-direction: column;
     width: 30%;
-    font-family:italic 900 30px 'Roboto';
+    font:italic 900 30px 'Roboto';
     color:#000000;
     text-align: center;
 }
@@ -580,7 +582,7 @@ nav a:hover{
     height: 40px;
     padding: 10px;
     margin: 10px;
-    font-family:normal 400 17px 'Roboto';
+    font:normal 400 17px 'Roboto';
     border-radius: 15px;
     border: 1px solid #D8E0FF;
     outline:none;
@@ -622,6 +624,14 @@ nav a:hover{
 .yellow{background:url('../img/pageThreeBg.png')  center/cover ;padding-top: 50px;}
 .purple{background:url('../img/pageFourBg.png')  center/cover ;padding-top: 50px;} */
 
+.green{background: url('../img/pageTwoBg.png') center/cover;padding-top: 50px; padding-bottom: 89px;
+}
+.red{background: url('../img/pageOneBg.png') center/cover;}
+.yellow{background:url('../img/pageThreeBg.png')  center/cover ;padding-top: 50px; padding-bottom: 89px;
+}
+.purple{background:url('../img/pageFourBg.png')  center/cover ;padding-top: 50px; padding-bottom: 89px;
+}
+
 #menu__toggle{
     display: none;
 }
@@ -633,6 +643,80 @@ nav a:hover{
     color: crimson;
     text-align: left;
     visibility: hidden;
+}
+.aboutUs{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: url("../img/bg_about.png") center/cover ;
+    padding-top: 89px;
+    padding-bottom: 89px;
+
+}
+.aboutUs h1{
+    font-family: 'Roboto';
+    font-style: italic;
+    font-weight: 900;
+    font-size: 60px;
+    line-height: 183.8%;
+    color: #464646;
+}
+.about_info{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 85%;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+.info_blocks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 564px;
+}
+.about_logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #A6B7FF;
+    border-radius: 50%;
+    padding: 30px;
+    max-width: 120px;
+    max-height: 120px;
+}
+.about_text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.about_text h2{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 183.8%;
+    color: #000000;
+    padding-bottom: 38px;
+    padding-top: 12px;
+}
+.about_text p{
+    font-family: 'Calibri';
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 70%;
+}
+.triangle_bg{
+    background: url("../img/center_about_bg.png") center/cover no-repeat;
+    height: 528px;
+
 }
 @media (min-width: 320px) and (max-width: 480px) {
     /* .red{background: url('../img/bg1_mob.png') center/cover ;}
